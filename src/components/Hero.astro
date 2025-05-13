@@ -1,0 +1,193 @@
+---
+import { Image } from "astro:assets";
+import logoBienvenido from "../assets/logoBienvenido.png";
+import finanzas from "../assets/finanzas.jpg";
+---
+
+<div>
+    <div class="videoContainer">
+        <div class="tituloContainer">
+            <h1>capital</h1>
+        </div>
+    </div>
+
+    <div class="heroContent">
+        <h2>MERCADOS FINANCIEROS Y AGRICOLAS</h2>
+        
+    </div>
+
+    <div class="asesoramientosContainer">
+        <h3>Asesoramiento Especializado</h3>
+        <h2 class="and">&</h2>
+        <div class="finanzas">
+            <a href="/finanzas/Finanzas">FINANZAS</a>
+        </div>
+        <div class="agronegocios">
+            <a href="/finanzas/Finanzas">AGRONEGOCIOS</a>
+        </div>
+    </div>
+
+    <div class="bienvenido">
+        <div class="logoBienvenidoContainer">
+            <Image src={logoBienvenido} alt="logo" width={1000}  class="logoBienvenido"></Image>
+        </div>
+        <div class="bienvenidoText">
+            <h3>Bienvenido a Capital & Agribusiness</h3>
+            <p>Somos una red de profesionales con back-ground amplio y analítico. Abarcando desde la Administración de Empresas, la Economía, Finanzas, Investigación, los Agronegocios, el Mercado Inmobiliario y el Comercio Exterior.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .videoContainer {
+        position: relative;
+        height: 560px;
+        background-color: black;
+    }
+    .tituloContainer{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 2rem;
+    }
+    .tituloContainer h1{
+        margin: 0px;
+    }
+    .heroContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        border-top: 3px solid white;
+        border-bottom: 3px solid white;
+        
+    }
+    .heroContent h2{
+        z-index: 2;
+        font-size: 2.5rem;
+        padding: 10px 0px;
+        margin: 0px;
+    }
+    .asesoramientosContainer{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 340px;
+    }
+    .asesoramientosContainer h3{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-size: 1.5rem;
+        padding: 0px;
+        margin: 0px;
+        
+        background-image: radial-gradient(circle at center top, rgb(0, 0, 0) 40%, rgba(255, 255, 255, 0) 80%);
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .and{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -120%);
+        color: white;
+        font-size: 5rem;
+    }
+    .finanzas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        background-color: green;
+        background-image: url("../assets/finanzas.jpg");
+        background-position: top ;
+        background-size: cover;
+    }
+    .finanzas a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        color: rgb(255, 255, 255);
+        width: 200px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0);
+        border: solid 4px white;
+        border-radius: 35px;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+    .agronegocios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        background-color: yellow;
+        background-image: url("../assets/farm.jpg");
+        background-position: bottom ;
+        background-size: cover;
+    }
+    .agronegocios a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        color: rgb(255, 255, 255);
+        width: 200px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0);
+        border: solid 4px white;
+        border-radius: 35px;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+    .bienvenido{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 350px;
+    }
+
+    .logoBienvenidoContainer{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 270px;
+        height: 270px;
+
+    }
+    .logoBienvenido{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .bienvenidoText{
+        padding-left: 30px;
+        width: 50%;
+    }
+    .bienvenidoText h3{
+        font-size: 2.5rem;
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 50px;
+    }
+    .bienvenidoText p{
+        font-size: 1.1rem;
+        width: 100%;
+    }
+</style>

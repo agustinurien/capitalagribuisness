@@ -1,0 +1,110 @@
+---
+import { Image } from 'astro:assets';
+import { FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import logoNav from '../assets/logoNav.png';
+---
+
+<div class="navbarContainer">
+    <nav class="navbar">
+        <div class="logoNavContainer">
+            <a href="/"><Image src={logoNav} alt="logo" width={1000}  class="logoNav"></a>
+        </div>
+        <div class="navbarContent">
+            <ul class="navbarLinks">
+                <li><a href="/finanzas/Finanzas">FINANZAS</a></li>
+                <li><a href="/agronegocios/Agronegocios">AGRONEGOCIOS</a></li>
+                <li><a href="/Nosotros">NOSOTROS</a></li>
+                <li><a href="/contact">NOTICIAS</a></li>
+                <li><a href="/contact">CONTACTO</a></li>
+            </ul>
+            <ul class="navbarSocial">
+                <li><a href="/contact"><FaInstagram /></a></li>
+                <li><a href="/contact"><FaLinkedin /></a></li>
+                <li><a href="/contact"><FaTwitter /></a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<style>
+    .logoNavContainer{
+        width: 300px;
+        height: 100%;
+        padding: 0px 20px;
+    }
+    .logoNavContainer a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .logoNavContainer .logoNav{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .navbarContainer {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .navbar {
+        padding: 0px 30px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        background-color: rgb(255, 255, 255);
+        box-sizing: border-box;
+    }
+    .navbarContent{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: fit-content;
+        height: 100%;
+    }
+    .navbar .navbarLinks{
+        padding: 0px 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+        height: 100%;
+        margin: 0px;
+    }
+    .navbar .navbarSocial{
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+        height: 100%;
+        margin: 0px;
+    }
+    .navbar .navbarSocial li a{
+        font-size: 1.3rem;
+        
+    }
+    .navbar li a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    
+
+    
+    
+</style>

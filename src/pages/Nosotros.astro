@@ -1,0 +1,102 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+const items = [
+    {
+        title: "Capital",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        
+    },
+    {
+        title: "Finanzas",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        
+    },
+    {
+        title: "Agronegocios",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        
+    },
+    {
+        title: "Asesoramiento",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        
+    },
+    {
+        title: "Inversiones",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        
+    },
+    {
+        title: "Mercados",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        
+    },
+    {
+        title: "Capital",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        
+    }
+    
+]
+---
+
+<Layout>
+    <div class="nosotros">
+        <h2>SOBRE NOSOTROS</h2>
+    </div>
+    <div class="expertise">
+        <h3>EXPERTISE</h3>
+        <p>Somos una red de profesionales con back-ground amplio y analítico. Abarcando desde la Administración de Empresas, la Economía, las Finanzas, la Investigación, los Agronegocios, el Mercado Inmobiliario y el Comercio Exterior.</p>
+        <p>Poseemos una Visión Integral y Holística, con Capacidad de Análisis, para poder comprender una Situación particular pero siempre enmarcada dentro de una Visión y Marco General, amplio y diverso.</p>
+        <p>Brindamos Asesoramiento a Empresas e Individuos, manteniendo relaciones estables y duraderas con nuestros clientes, con lazos de mucha confianza y serenidad.</p>
+    </div>
+
+    <div class="experiencia">
+        <h3>EXPERIENCIA</h3>
+        <p>Somos una red de profesionales con back-ground amplio y analítico. Abarcando desde la Administración de Empresas, la Economía, las Finanzas, la Investigación, los Agronegocios, el Mercado Inmobiliario y el Comercio Exterior.</p>
+        
+    </div>
+
+    <div class="nosotros">
+        <h2>VISIÓN & VALOR</h2>
+    </div>
+    <div class="expertise">
+        <h3>NUESTRA VISIÓN</h3>
+        <p>Somos una red de profesionales con back-ground amplio y analítico. Abarcando desde la Administración de Empresas, la Economía, las Finanzas, la Investigación, los Agronegocios, el Mercado Inmobiliario y el Comercio Exterior.</p>
+        <p>Poseemos una Visión Integral y Holística, con Capacidad de Análisis, para poder comprender una Situación particular pero siempre enmarcada dentro de una Visión y Marco General, amplio y diverso.</p>
+        <p>Brindamos Asesoramiento a Empresas e Individuos, manteniendo relaciones estables y duraderas con nuestros clientes, con lazos de mucha confianza y serenidad.</p>
+    </div>
+
+    <div class="experiencia">
+        <h3>NUESTROS VALORES</h3>
+        <p>Somos una red de profesionales con back-ground amplio y analítico. Abarcando desde la Administración de Empresas, la Economía, las Finanzas, la Investigación, los Agronegocios, el Mercado Inmobiliario y el Comercio Exterior.</p>
+        
+    </div>
+
+    <div class="nosotros">
+        <h2>NUESTRAS FORTALEZAS</h2>
+    </div>
+    <div class="itemsContainer">
+        {
+            items.map((item) => (
+                <div class="item">
+                    <h2>{item.title}</h2>
+                    <p>{item.description}</p>
+                </div>
+            ))
+        }
+    </div>
+</Layout>
+
+<style>
+    .nosotros {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 250px;
+        background-color: #3c3c3c;
+        box-sizing: border-box;
+    }
+</style>
