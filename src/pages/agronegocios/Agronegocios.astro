@@ -1,149 +1,251 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
-import { FaLeaf } from "react-icons/fa";
+import { FaRegCheckCircle, FaLeaf } from "react-icons/fa";
+
+import download from "../../assets/agronegocios/download.png";
+import download1 from "../../assets/agronegocios/download-1.png";
+import download2 from "../../assets/agronegocios/download-2.png";
+import download3 from "../../assets/agronegocios/download-3.png";
+import download4 from "../../assets/agronegocios/download-4.png";
+import download5 from "../../assets/agronegocios/download-5.png";
+import download6 from "../../assets/agronegocios/download-6.png";
+import download7 from "../../assets/agronegocios/download-7.png";
 
 const items = [
-    {
-        title: "Capital",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Finanzas",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Agronegocios",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Asesoramiento",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Inversiones",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Mercados",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Capital",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Finanzas",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    }
-    
-]
+  {
+    title: "ASESORAMIENTO EN MERCADOS AGRÍCOLAS",
+    icon: download,
+    description:
+      "En un mercado volátil y de alto riesgo, con una participación creciente de actores dentro y fuera del sector, brindamos asesoramiento estratégico para que usted decida cuándo, cómo y dónde comprar o vender.",
+  },
+  {
+    title: "ESTRATEGIAS DE COBERTURA DE PRECIOS DE GRANOS",
+    icon: download1,
+    description:
+      "Obtención de financiamiento a través del ecosistema del mercado de capitales:  Cauciones bursátiles. Cheques de pago diferido (avalados por SGR o bancarios), garantizados y no garantizados. Pagarés bursátiles. Facturas de crédito electrónica.",
+  },
+  {
+    title: "FINANCIACIONES & COLOCACIONES",
+    icon: download2,
+    description:
+      "Alternativas de Financiación y Colocación para el sector de Agronegocios.",
+  },
+  {
+    title: "CRÉDITOS DE CARBONO / ENERGÍAS RENOVABLES",
+    icon: download3,
+    description:
+      "Reducción de la huella de carbono. Certificación, desarrollo y registro de proyectos de generación de créditos de carbono. Comercialización de créditos de carbono.",
+  },
+  {
+    title: "MERCADO DE FUTUROS Y OPCIONES",
+    icon: download4,
+    description: "",
+  },
+  {
+    title: "COMERCIALIZACIÓN DE GRANOS",
+    icon: download5,
+    description:
+      "Ofrecemos la posibilidad de operar en distintos mercados: físicos y de futuros en Argentina, en el mercado FOB, y en el mercado de futuros internacional. Brindamos servicios de ejecución, administración y clearing a través de una de las empresas de mayor reputación, experiencia y trayectoria del mercado.",
+  },
+  {
+    title: "WARRANTS ELECTRÓNICOS",
+    icon: download6,
+    description:
+      "Herramienta financiera innovadora diseñada para facilitar el acceso al crédito mediante garantías y reducción de costos. Es un título de crédito digital que certifica la posesión de una determinada cantidad y calidad de productos agropecuarios almacenados en un depósito autorizado. Funciona como un recibo que garantiza la existencia y propiedad de esos bienes.",
+  },
+  {
+    title: "INVERSIONES EN AGRONEGOCIOS",
+    icon: download7,
+    description:
+      "Ofrecemos oportunidades de inversión en el sector agropecuario, orientadas a generar rentabilidad a través del desarrollo, producción y comercialización de productos del agro. Diseñamos estrategias a medida para maximizar el valor de cada proyecto, combinando innovación, gestión de riesgos y conocimiento del mercado.",
+  },
+];
 ---
+
 <Layout>
+  <div>
+    <div class="videoContainer"></div>
 
-    <div>
-        <div class="videoContainer">
-            <div class="tituloContainer">
-                <h1>capital</h1>
+    <div class="servicio">
+      <div class="icon"><FaLeaf /></div>
+      <div class="servicioText">
+        <h2>NUESTROS SERVICIOS <br /> EN FINANZAS</h2>
+        <h3>Para Individuos, Empresas & Corporaciones.</h3>
+      </div>
+    </div>
+
+    <div class="itemsContainer">
+      {
+        items.map((item) => (
+          <div class="item">
+            <div class="iconContainer">
+              <div class="iconItem">
+                <Image
+                  src={item.icon}
+                  alt="logo"
+                  width={1000}
+                  class="logoItem"
+                />
+              </div>
             </div>
-        </div>
-        
-        <div class="servicio">
-            <div class="icon">
-                <FaLeaf />
+            <div class={item.description ? "textItem" : "sinDescripcion"}>
+              <h2>{item.title}</h2>
+              <ul>
+                {item.description
+                  .split(".")
+                  .filter((p) => p.trim() !== "")
+                  .map((p) => (
+                    <li>
+                      {" "}
+                      <FaRegCheckCircle />
+                      <p>{p.trim()}.</p>
+                    </li>
+                  ))}
+              </ul>
             </div>
-            <div class="servicioText">
-                <h2>NUESTROS SERVICIOS <br> EN AGRONEGOCIOS</h2>
-                <h3>Para Individuos, Empresas & Corporaciones.</h3>
-            </div>
-        </div>
-        
-        <div class="itemsContainer">
-            {
-                items.map((item) => (
-                    <div class="item">
-                        <h2>{item.title}</h2>
-                        <p>{item.description}</p>
-                    </div>
-                ))
-            }
-        </div>
-    </Layout>
+          </div>
+        ))
+      }
+    </div>
+  </div>
 
-    <style>
-        .videoContainer {
-        position: relative;
-        height: 400px;
-        background-color: red;
+  <style>
+    .videoContainer {
+      position: relative;
+      height: 400px;
+      background-color: rgb(0, 0, 0);
     }
-    .tituloContainer{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 2rem;
-    }
-    .tituloContainer h1{
-        margin: 0px;
-    }
-    .servicio{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 400px;
-        background-color: rgb(0, 255, 140);
-    }
-    .icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 5rem;
-        width: 130px;
-        height: 130px;
-        border-radius: 100%;
-        color: white;
-        border: 4px solid white;
-    }
-    .servicioText{
-        padding-left: 30px;
-        width: 40%;
-    }
-    .servicioText h2{
-        font-size: 3.5rem;
-        margin: 0px;
-        color: white;
 
+    .servicio {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+      background-image:
+        linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.989) 30%,
+          rgba(225, 25, 25, 0)
+        ),
+        url(../../assets/farm.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: grayscale(100%);
     }
-    .servicioText h3{
-        margin: 0px;
-        color: white;
-
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 5rem;
+      width: 130px;
+      height: 130px;
+      border-radius: 100%;
+      color: white;
+      border: 7px solid white;
     }
-    .itemsContainer{
-        padding: 20px;
-        gap: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-        height: 100%;
-        background-color: blue;
-        box-sizing: border-box;
+    .servicioText {
+      padding-left: 30px;
+      width: 40%;
     }
-    .item{
-        width: 500px;
-        height: 300px;
-        background-color: rgb(255, 255, 255);
-        border: 2px solid black;
-        border-radius: 20px;
+    .servicioText h2 {
+      font-size: 3.5rem;
+      margin: 0px;
+      color: white;
     }
-    </style>
+    .servicioText h3 {
+      margin: 0px;
+      color: white;
+    }
+    .itemsContainer {
+      border-top: 4px solid white;
+      padding: 120px 0px;
+      gap: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(at top left, #040403, transparent 35%),
+        radial-gradient(at bottom right, #040403, transparent 35%), #525236;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      box-sizing: border-box;
+    }
+    .item {
+      display: flex;
+      width: 500px;
+      height: 400px;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid black;
+      border-radius: 20px;
+    }
+    .iconContainer {
+      width: 160px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 3px solid black;
+    }
+    .iconItem {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logoItem {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .item .textItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 20px;
+      width: 100%;
+      padding-left: 20px;
+      padding-top: 30px;
+    }
+    .item .sinDescripcion {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      padding-left: 20px;
+    }
+    .item .sinDescripcion h2 {
+      margin: 0px;
+      width: 95%;
+    }
+    .item .textItem h2 {
+      margin: 0px;
+      width: 95%;
+    }
+    .item ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 0px;
+      margin: 0px;
+    }
+    .item li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      list-style: none;
+    }
+    .item li p {
+      margin: 0px;
+      width: 85%;
+    }
+  </style>
+</Layout>

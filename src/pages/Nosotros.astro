@@ -1,102 +1,677 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import group from "../assets/group.png";
+import vision from "../assets/vision.png";
+import fortaleza from "../assets/fortaleza.png";
+
+import expertise from "../assets/expertise.png";
+import experiencia from "../assets/experiencia.png";
+import valores from "../assets/valores.png";
+import vision2 from "../assets/visionIcon.png";
+import { FaRegCheckCircle } from "react-icons/fa";
+
+import icon1 from "../assets/fortalezas/download.png";
+import icon2 from "../assets/fortalezas/download-1.png";
+import icon3 from "../assets/fortalezas/download-2.png";
+import icon4 from "../assets/fortalezas/download-3.png";
+import icon5 from "../assets/fortalezas/download-4.png";
+import icon6 from "../assets/fortalezas/download-5.png";
+import icon7 from "../assets/fortalezas/download-6.png";
 
 const items = [
-    {
-        title: "Capital",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Finanzas",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Agronegocios",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Asesoramiento",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Inversiones",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Mercados",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    },
-    {
-        title: "Capital",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        
-    }
-    
-]
+  {
+    title: "OFERTA INTEGRAL DE SERVICIOS",
+    icon: icon1,
+    description:
+      "Finanzas. Agronegocios. Inversiones inmobiliarias. Consultoría empresarial. Ofrecemos una propuesta amplia e integral de servicios, respaldada por un equipo multidisciplinario de empresas y profesionales de altísimo nivel en cada área de especialización. Nuestro enfoque se basa en brindar calidad de servicio, know-how técnico y experiencia profesional, cumpliendo con estrictos estándares de regulación en cada segmento.",
+  },
+  {
+    title: "EVITAR CONFLICTOS DE INTERÉS",
+    icon: icon2,
+    description:
+      "Evitar conflictos de interés en la relación con nuestros clientes —ya sea en estructuras, precios, comisiones o productos— es parte central de nuestra filosofía y de nuestra gestión.",
+  },
+  {
+    title: "DISCRECIÓN Y CONFIDENCIALIDAD",
+    icon: icon3,
+    description:
+      "Aplicamos una metodología de trabajo basada en la discreción y la confidencialidad, con el objetivo de construir relaciones sólidas y de largo plazo.",
+  },
+  {
+    title: "SERVICIO PERSONALIZADO",
+    icon: icon4,
+    description:
+      "Nos enfocamos en la escucha activa para detectar las necesidades de nuestros clientes, definir su perfil y brindar soluciones a medida, fomentando relaciones duraderas.",
+  },
+  {
+    title: "TRANSPARENCIA",
+    icon: icon5,
+    description:
+      "La transparencia es un pilar fundamental y la base de nuestra misión, clave para construir relaciones de confianza mutua.",
+  },
+  {
+    title: "INDEPENDENCIA",
+    icon: icon6,
+    description:
+      "Nuestra independencia nos permite ser críticos y seleccionar libremente las mejores alternativas, sin presiones de accionistas, grupos económicos ni obligaciones con entidades, personas, operadores, administradores, financiadores, tomadores, desarrolladores de productos o incluso del propio cliente. Esto garantiza que nuestro asesoramiento sea siempre imparcial, crítico y enfocado en sus intereses. Nos apasiona lo que hacemos. Como socios involucrados en el desarrollo permanente de nuestro negocio, trabajamos a través de partnerships estratégicos. En cada tema específico, estamos del lado del cliente, buscando de manera independiente la alternativa más beneficiosa para su situación.",
+  },
+  {
+    title: "FLEXIBILIDAD Y ADAPTACIÓN",
+    icon: icon7,
+    description:
+      "Nos desarrollamos en entornos cambiantes y dinámicos, con la capacidad de analizarlos y adaptarnos con flexibilidad a cada situación.",
+  },
+];
 ---
 
 <Layout>
-    <div class="nosotros">
-        <h2>SOBRE NOSOTROS</h2>
+  <div class="servicio nosotros">
+    <div class="icon">
+      <Image src={group} alt="logo" width={1000} class="iconNosotros" />
     </div>
-    <div class="expertise">
-        <h3>EXPERTISE</h3>
-        <p>Somos una red de profesionales con back-ground amplio y analítico. Abarcando desde la Administración de Empresas, la Economía, las Finanzas, la Investigación, los Agronegocios, el Mercado Inmobiliario y el Comercio Exterior.</p>
-        <p>Poseemos una Visión Integral y Holística, con Capacidad de Análisis, para poder comprender una Situación particular pero siempre enmarcada dentro de una Visión y Marco General, amplio y diverso.</p>
-        <p>Brindamos Asesoramiento a Empresas e Individuos, manteniendo relaciones estables y duraderas con nuestros clientes, con lazos de mucha confianza y serenidad.</p>
+    <div class="servicioText">
+      <h2>SOBRE NOSOTROS</h2>
     </div>
+  </div>
 
+  <div class="expertise">
+    <div class="expertiseContainer">
+      <h3>EXPERTISE</h3>
+      <div class="expertiseContent">
+        <div class="expertiseText">
+          <ul>
+            <li>
+              <FaRegCheckCircle />
+              <p>
+                Somos una red de profesionales con un sólido background y
+                enfoque analítico, que abarca diversas disciplinas como
+                Administración de Empresas, Economía, Finanzas, Investigación,
+                Agronegocios, Mercado Inmobiliario y Comercio Exterior.
+              </p>
+            </li>
+            <li>
+              <FaRegCheckCircle />
+              <p>
+                Contamos con una visión integral y holística, y una alta
+                capacidad de análisis que nos permite comprender cada situación
+                particular dentro de un marco general amplio y diverso.
+              </p>
+            </li>
+            <li>
+              <FaRegCheckCircle />
+              <p>
+                Brindamos asesoramiento a empresas e individuos, construyendo
+                relaciones estables, duraderas y basadas en la confianza y la
+                serenidad.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="expertiseImage">
+          <Image
+            src={expertise}
+            alt="logo"
+            width={1000}
+            class="iconExpertise"
+          />
+        </div>
+      </div>
+    </div>
     <div class="experiencia">
+      <div class="experienciaImage">
+        <Image
+          src={experiencia}
+          alt="logo"
+          width={1000}
+          class="iconExperiencia"
+        />
+      </div>
+      <div class="experienciaText">
         <h3>EXPERIENCIA</h3>
-        <p>Somos una red de profesionales con back-ground amplio y analítico. Abarcando desde la Administración de Empresas, la Economía, las Finanzas, la Investigación, los Agronegocios, el Mercado Inmobiliario y el Comercio Exterior.</p>
-        
+        <ul>
+          <li>
+            <FaRegCheckCircle />
+            <p>
+              Contamos con 30 años de experiencia en el rubro de Finanzas y
+              Agronegocios. Esta trayectoria nos permite adaptarnos con
+              flexibilidad a los cambios del mundo actual, con una visión
+              global, un espíritu innovador y una actitud emprendedora.
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 
-    <div class="nosotros">
-        <h2>VISIÓN & VALOR</h2>
+  <div class="servicio visionValores">
+    <div class="icon">
+      <Image src={vision} alt="logo" width={1000} class="iconNosotros" />
     </div>
-    <div class="expertise">
-        <h3>NUESTRA VISIÓN</h3>
-        <p>Somos una red de profesionales con back-ground amplio y analítico. Abarcando desde la Administración de Empresas, la Economía, las Finanzas, la Investigación, los Agronegocios, el Mercado Inmobiliario y el Comercio Exterior.</p>
-        <p>Poseemos una Visión Integral y Holística, con Capacidad de Análisis, para poder comprender una Situación particular pero siempre enmarcada dentro de una Visión y Marco General, amplio y diverso.</p>
-        <p>Brindamos Asesoramiento a Empresas e Individuos, manteniendo relaciones estables y duraderas con nuestros clientes, con lazos de mucha confianza y serenidad.</p>
+    <div class="servicioText">
+      <h2>VISIÓN & VALORES</h2>
     </div>
+  </div>
 
-    <div class="experiencia">
+  <div class="vision">
+    <div class="visionContainer">
+      <div class="visionContent">
+        <div class="visionText">
+          <h3>NUESTRA VISIÓN</h3>
+          <ul>
+            <li>
+              <FaRegCheckCircle />
+              <p>
+                Generamos relaciones humanas estrechas y de largo plazo con
+                nuestros clientes, basadas en la confianza, la integridad ética,
+                la transparencia, la confidencialidad, el servicio y altos
+                estándares profesionales, en todas las áreas vinculadas a
+                Finanzas, Agronegocios, Inversiones Inmobiliarias y Coaching
+                Empresarial.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="visionImage">
+          <Image src={vision2} alt="logo" width={1000} class="iconVision" />
+        </div>
+      </div>
+    </div>
+    <div class="valores">
+      <div class="valoresImage">
+        <Image src={valores} alt="logo" width={1000} class="iconValores" />
+      </div>
+      <div class="valoresText">
         <h3>NUESTROS VALORES</h3>
-        <p>Somos una red de profesionales con back-ground amplio y analítico. Abarcando desde la Administración de Empresas, la Economía, las Finanzas, la Investigación, los Agronegocios, el Mercado Inmobiliario y el Comercio Exterior.</p>
-        
+        <ul>
+          <li>
+            <FaRegCheckCircle />
+            <p>
+              Confianza y servicio: Nos comprometemos a construir relaciones
+              basadas en la confianza, ofreciendo un servicio de excelencia.
+            </p>
+          </li>
+          <li>
+            <FaRegCheckCircle />
+            <p>
+              Tecnicismo y profesionalismo: Nos sentimos orgullosos de la
+              calidad técnica y profesional de nuestro trabajo.
+            </p>
+          </li>
+          <li>
+            <FaRegCheckCircle />
+            <p>
+              Compromiso personal y ético: La integridad y la honestidad son el
+              corazón de nuestro negocio.
+            </p>
+          </li>
+          <li>
+            <FaRegCheckCircle />
+            <p>
+              Intereses del cliente primero: Los intereses de nuestros clientes
+              siempre son nuestra prioridad. Nuestros activos más valiosos son
+              nuestra gente y nuestra reputación.
+            </p>
+          </li>
+          <li>
+            <FaRegCheckCircle />
+            <p>
+              Pasión por lo que hacemos: Ponemos pasión en cada proyecto y nos
+              esforzamos diariamente por anticipar y abarcar las necesidades de
+              nuestros clientes.
+            </p>
+          </li>
+          <li>
+            <FaRegCheckCircle />
+            <p>
+              Discreción y confidencialidad: La protección de la privacidad y la
+              confidencialidad de nuestros clientes es nuestra mayor prioridad.
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 
-    <div class="nosotros">
-        <h2>NUESTRAS FORTALEZAS</h2>
+  <div class="servicio fortaleza">
+    <div class="icon">
+      <Image src={fortaleza} alt="logo" width={1000} class="iconNosotros" />
     </div>
-    <div class="itemsContainer">
-        {
-            items.map((item) => (
-                <div class="item">
-                    <h2>{item.title}</h2>
-                    <p>{item.description}</p>
-                </div>
-            ))
-        }
+    <div class="servicioText">
+      <h2>NUESTRAS FORTALEZAS</h2>
     </div>
+  </div>
+  <div class="itemsContainer">
+    {
+      items.map((item) => (
+        <div class="item">
+          <div class="iconContainer">
+            <div class="iconItem">
+              <Image src={item.icon} alt="logo" width={1000} class="logoItem" />
+            </div>
+          </div>
+          <div class="textItem">
+            <h2>{item.title}</h2>
+            <ul>
+              {item.description
+                .split(".")
+                .filter((p) => p.trim() !== "")
+                .map((p) => (
+                  <li>
+                    {" "}
+                    <FaRegCheckCircle />
+                    <p>{p.trim()}.</p>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </div>
+      ))
+    }
+  </div>
 </Layout>
 
 <style>
-    .nosotros {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        height: 250px;
-        background-color: #3c3c3c;
-        box-sizing: border-box;
-    }
+  .nosotros {
+    border-bottom: 4px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    background-size: cover;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    padding-right: 250px;
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.989) 25%, rgba(0, 0, 0, 0)),
+      url(../assets/work.jpg);
+  }
+  .visionValores {
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    padding-right: 250px;
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.989) 25%, rgba(0, 0, 0, 0)),
+      url(../assets/sticky.jpg);
+  }
+  .fortaleza {
+    border-top: 4px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    padding-right: 250px;
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.989) 25%, rgba(0, 0, 0, 0)),
+      url(../assets/fort.png);
+  }
+  .icon {
+    padding-right: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    color: white;
+  }
+  .iconNosotros {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .servicioText {
+    padding-left: 30px;
+    width: 40%;
+  }
+  .servicioText h2 {
+    font-size: 3.5rem;
+    margin: 0px;
+    color: white;
+    font-family: "NotoSerifRegular", serif;
+    font-weight: 400;
+  }
+
+  .expertise {
+    background:
+      radial-gradient(at top left, #010101, transparent 45%),
+      radial-gradient(at bottom right, #010101, transparent 35%), #404041;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 750px;
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+  .expertiseContainer {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .expertiseContainer h3 {
+    font-family: "NotoSerifBold", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.7rem;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+  }
+  .expertiseContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .expertiseText {
+    color: white;
+    width: 50%;
+  }
+  .expertiseText ul {
+    padding-top: 20px;
+    padding-left: 10px;
+    margin: 0px;
+  }
+  .expertiseText li {
+    display: flex;
+    gap: 10px;
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+  .expertiseText li p {
+    width: 90%;
+    margin: 0px;
+  }
+
+  .expertiseImage {
+    width: 50%;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .expertiseImage .iconExpertise {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+  }
+
+  .experiencia {
+    width: 70%;
+    height: 30%;
+
+    display: flex;
+  }
+  .experienciaText {
+    color: white;
+    width: 50%;
+  }
+  .experienciaText h3 {
+    font-family: "NotoSerifBold", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.7rem;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+  }
+  .experienciaText ul {
+    padding-top: 20px;
+    padding-left: 10px;
+    margin: 0px;
+  }
+  .experienciaText li {
+    display: flex;
+    gap: 10px;
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+  .experienciaText li p {
+    width: 90%;
+    margin: 0px;
+  }
+  .experienciaImage {
+    width: 50%;
+    height: 100%;
+  }
+  .experienciaImage .iconExperiencia {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .vision {
+    background:
+      radial-gradient(at top left, #010101, transparent 45%),
+      radial-gradient(at bottom right, #010101, transparent 35%), #404041;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 750px;
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+  .visionContainer {
+    width: 70%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .visionText h3 {
+    font-family: "NotoSerifBold", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.7rem;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+  }
+  .visionContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .visionText {
+    color: white;
+    width: 50%;
+  }
+  .vision ul {
+    padding-top: 20px;
+    padding-left: 10px;
+    margin: 0px;
+  }
+  .vision li {
+    display: flex;
+    gap: 10px;
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+  .vision li p {
+    width: 90%;
+    margin: 0px;
+  }
+  .visionImage {
+    width: 50%;
+    height: 80%;
+  }
+  .visionImage .iconVision {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .valores {
+    width: 70%;
+    height: 55%;
+
+    display: flex;
+  }
+  .valoresText {
+    color: white;
+    width: 50%;
+  }
+
+  .valoresText h3 {
+    font-family: "NotoSerifBold", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.7rem;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+  }
+  .valoresText ul {
+    padding-top: 20px;
+    padding-left: 10px;
+    margin: 0px;
+  }
+  .valoresText li {
+    display: flex;
+    gap: 10px;
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+  .valoresText li p {
+    width: 90%;
+    margin: 0px;
+  }
+  .valoresImage {
+    width: 50%;
+    height: 80%;
+  }
+  .valoresImage .iconValores {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .itemsContainer {
+    border-top: 4px solid white;
+    padding: 120px 0px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background:
+      radial-gradient(at top left, #010101, transparent 45%),
+      radial-gradient(at bottom right, #010101, transparent 35%), #404041;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 500px;
+    height: 650px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  .iconContainer {
+    width: 160px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconItem {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logoItem {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .item .textItem {
+    border-top: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 30px;
+    box-sizing: border-box;
+  }
+  .item .textItem h2 {
+    margin: 0px;
+    width: 95%;
+  }
+  .item ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .item li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    list-style: none;
+  }
+  .item li p {
+    margin: 0px;
+    width: 85%;
+  }
 </style>
