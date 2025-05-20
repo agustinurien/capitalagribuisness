@@ -11,6 +11,7 @@ import icon5 from "../../assets/icon5.png";
 import icon6 from "../../assets/icon6.png";
 import icon7 from "../../assets/icon7.png";
 import icon8 from "../../assets/icon8.png";
+import VideoSequencer from "../../components/VideoSequencer";
 
 const items = [
   {
@@ -62,11 +63,37 @@ const items = [
       "A través de una visión empresarial holística, abordamos el complejo sistema que integra a los accionistas y sus familias, el producto, el management y control, los empleados y el staff de asesores.",
   },
 ];
+
+import video1 from "../../../public/videos/01 Identificación fases del mercado.mp4";
+import video2 from "../../../public/videos/02 Análisis de tendencias.mp4";
+import video3 from "../../../public/videos/03 Tendencia alcista.mp4";
+import video4 from "../../../public/videos/04 Reversión de tendencias.mp4";
+import video5 from "../../../public/videos/05 Tendencia bajista.mp4";
+
+const videoList = [
+  {
+    src: video1,
+  },
+  {
+    src: video2,
+  },
+  {
+    src: video3,
+  },
+  {
+    src: video4,
+  },
+  {
+    src: video5,
+  },
+];
 ---
 
 <Layout>
   <div>
-    <div class="videoContainer"></div>
+    <div class="videoContainer">
+      <VideoSequencer videos={videoList} client:load />
+    </div>
 
     <div class="servicio">
       <div class="icon">$</div>
@@ -117,11 +144,12 @@ const items = [
     position: relative;
     height: 400px;
     background-color: rgb(0, 0, 0);
+    padding: 20px 50px;
   }
 
   .servicio {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 400px;
     background-image:
@@ -136,12 +164,14 @@ const items = [
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
-    width: 130px;
-    height: 130px;
+    font-size: 8rem;
+    width: 150px;
+    height: 150px;
     border-radius: 100%;
     color: white;
     border: 7px solid white;
+    margin-left: 300px;
+    margin-right: 80px;
   }
   .servicioText {
     padding-left: 30px;
@@ -151,10 +181,17 @@ const items = [
     font-size: 3.5rem;
     margin: 0px;
     color: white;
+    font-family: "NotoSerifRegular", serif;
+    font-weight: 400;
+    line-height: 1.1;
   }
   .servicioText h3 {
     margin: 0px;
+    margin-top: 20px;
     color: white;
+    font-family: "NotoSansRegular", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
   }
   .itemsContainer {
     border-top: 4px solid white;
@@ -210,6 +247,8 @@ const items = [
     padding-top: 30px;
   }
   .item .textItem h2 {
+    font-family: "NotoSerifBold", serif;
+    font-weight: 700;
     margin: 0px;
     width: 95%;
   }
@@ -232,5 +271,8 @@ const items = [
   .item li p {
     margin: 0px;
     width: 85%;
+    font-family: "NotoSansRegular", sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
   }
 </style>

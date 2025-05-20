@@ -1,0 +1,160 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import qr1 from "../assets/qr1.jpg";
+import qr2 from "../assets/qr2.jpg";
+import preguntaImagen from "../assets/pregunta.png";
+
+import Contact from "../components/Contact";
+
+import { FaWhatsapp } from "react-icons/fa";
+---
+
+<Layout>
+  <main class="contactContainer">
+    <div class="contactInfo">
+      <h1>Contacto</h1>
+      <div class="mails">
+        <div class="mail">
+          <div class="imageContainer">
+            <Image src={qr1} alt="logo" width={1000} class="qr" />
+          </div>
+          <div class="mailInfo">
+            <h3>spm@capitalagribusiness.com</h3>
+            <h3 class="wpp"><FaWhatsapp />+54911 5718 8435</h3>
+          </div>
+        </div>
+
+        <div class="mail">
+          <div class="imageContainer">
+            <Image src={qr2} alt="logo" width={1000} class="qr" />
+          </div>
+          <div class="mailInfo">
+            <h3>jpm@capitalagribusiness.com</h3>
+            <h3 class="wpp"><FaWhatsapp />+54911 5721 9884</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="consultaContainer">
+      <div class="consulta">
+        <Contact client:load />
+        <div class="consultaImage">
+          <div class="imageContainerContact">
+            <Image
+              src={preguntaImagen}
+              alt="logo"
+              width={1000}
+              class="ilustracion"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .contactContainer {
+    background-color: #cccccc;
+    height: fit-content;
+    padding-top: 70px;
+    gap: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contactInfo {
+    width: 65%;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 20px;
+  }
+  .contactInfo h1 {
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+    border-bottom: 3px solid black;
+    font-family: "NotoSerifBold", sans-serif;
+    font-weight: 700;
+  }
+  .mails {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    gap: 50px;
+    padding: 20px 0px;
+  }
+  .mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    gap: 20px;
+    width: 100%;
+    padding-right: 70px;
+  }
+  .mail .imageContainer {
+    height: 150px;
+    width: 150px;
+    padding: 15px 20px;
+    border-right: 3px solid black;
+  }
+  .mail .imageContainer .qr {
+    height: 100%;
+    width: 100%;
+  }
+  .mailInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  .mailInfo h3 {
+    margin: 0px;
+    padding: 10px 0px;
+    font-size: 1.3rem;
+    color: black;
+    font-family: "NotoSerifBold", sans-serif;
+    font-weight: 700;
+  }
+  .wpp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .consultaContainer {
+    background-color: #87315b;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .consulta {
+    width: 65%;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+  }
+  .consultaImage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 50%;
+    height: 100%;
+  }
+
+  .imageContainerContact {
+    height: 90%;
+    width: 100%;
+  }
+  .imageContainerContact .ilustracion {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+</style>

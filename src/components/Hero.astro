@@ -4,10 +4,52 @@ import logoBienvenido from "../assets/logoBienvenido.png";
 import finanzas from "../assets/finanzas.jpg";
 import logoHero from "../assets/logoHero.png";
 import logoHero2 from "../assets/logoHero2.png";
+
+import video1 from "../../../public/videos/01 Identificación fases del mercado.mp4";
+import video2 from "../../../public/videos/02 Análisis de tendencias.mp4";
+import video3 from "../../../public/videos/03 Tendencia alcista.mp4";
+import video4 from "../../../public/videos/04 Reversión de tendencias.mp4";
+import video5 from "../../../public/videos/05 Tendencia bajista.mp4";
+import video6 from "../../../public/videos/Cobertura de riesgos.mp4";
+import video7 from "../../../public/videos/Gestión de Riesgo.mp4";
+import video8 from "../../../public/videos/video 1.mp4";
+import video9 from "../../../public/videos/video 2.mp4";
+import VideoSequencer from "./VideoSequencer";
+
+const videoList = [
+  {
+    src: video1,
+  },
+  {
+    src: video2,
+  },
+  {
+    src: video3,
+  },
+  {
+    src: video4,
+  },
+  {
+    src: video5,
+  },
+  {
+    src: video6,
+  },
+  {
+    src: video7,
+  },
+  {
+    src: video8,
+  },
+  {
+    src: video9,
+  },
+];
 ---
 
 <div>
   <div class="videoContainer">
+    <VideoSequencer videos={videoList} client:load />
     <div class="tituloContainer">
       <Image src={logoHero} alt="logo" width={1000} class="logoHero" />
     </div>
@@ -52,26 +94,27 @@ import logoHero2 from "../assets/logoHero2.png";
 <style>
   .videoContainer {
     position: relative;
-    height: 560px;
-    background-color: black;
+    height: 480px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px 50px;
   }
   .tituloContainer {
     position: absolute;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.512);
 
-    width: 70%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .tituloContainer .logoHero {
-    filter: invert(100%);
     margin: 0px;
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     object-fit: contain;
   }
   .heroContent {
@@ -86,9 +129,12 @@ import logoHero2 from "../assets/logoHero2.png";
   .heroContent h2 {
     z-index: 2;
     font-size: 2.5rem;
-    padding: 20px 0px;
+    padding: 15px 0px;
+    padding-bottom: 10px;
     margin: 0px;
     margin-bottom: 5px;
+    font-family: "NotoSansRegular", sans-serif;
+    font-weight: 400;
   }
   .asesoramientosContainer {
     border-top: 3px solid white;
@@ -97,7 +143,7 @@ import logoHero2 from "../assets/logoHero2.png";
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 340px;
+    height: 320px;
   }
   .asesoramientosContainer h3 {
     position: absolute;
@@ -120,6 +166,9 @@ import logoHero2 from "../assets/logoHero2.png";
     justify-content: center;
     align-items: flex-start;
     pointer-events: none;
+
+    font-family: "NotoSansRegular", sans-serif;
+    font-weight: 400;
   }
   .and {
     position: absolute;
@@ -128,6 +177,8 @@ import logoHero2 from "../assets/logoHero2.png";
     transform: translate(-50%, -120%);
     color: white;
     font-size: 5rem;
+    font-family: "NotoSerifRegular", serif;
+    font-weight: 400;
   }
   .finanzas {
     display: flex;
@@ -135,7 +186,7 @@ import logoHero2 from "../assets/logoHero2.png";
     align-items: center;
     width: 50%;
     height: 100%;
-    background-color: green;
+
     background-image: url("../assets/finanzas.jpg");
     background-position: top;
     background-size: cover;
@@ -161,7 +212,7 @@ import logoHero2 from "../assets/logoHero2.png";
     align-items: center;
     width: 50%;
     height: 100%;
-    background-color: yellow;
+
     background-image: url("../assets/farm.jpg");
     background-position: bottom;
     background-size: cover;
@@ -206,13 +257,18 @@ import logoHero2 from "../assets/logoHero2.png";
     width: 50%;
   }
   .bienvenidoText h3 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     width: 100%;
     margin: 0px;
     margin-bottom: 50px;
+    font-family: "NotoSerifRegular", serif;
+    font-weight: 400;
   }
   .bienvenidoText p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
     width: 100%;
+    font-family: "NotoSansRegular", sans-serif;
+    font-weight: 400;
   }
 </style>
