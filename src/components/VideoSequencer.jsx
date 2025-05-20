@@ -9,13 +9,21 @@ const VideoSequencer = ({ videos }) => {
     if (!video || videos.length === 0) return;
 
     const handleEnded = () => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % videos.length);
+      // Avanzar al siguiente video o volver al inicio
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = prevIndex + 1;
+        return nextIndex < videos.length ? nextIndex : 0;
+      });
     };
 
     video.addEventListener("ended", handleEnded);
+
+    // Establecer el src y reproducir
     video.src = videos[currentIndex].src;
     video.load();
-    video.play();
+    video.play().catch((e) => {
+      console.error("Error al reproducir el video:", e);
+    });
 
     return () => {
       video.removeEventListener("ended", handleEnded);
@@ -24,13 +32,7 @@ const VideoSequencer = ({ videos }) => {
 
   return (
     <div className="videoContainer">
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        playsInline
-        className="videoPlayer"
-      />
+      <video ref={videoRef} muted playsInline className="videoPlayer" />
     </div>
   );
 };
