@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import "./video.css"
 
 const VideoSequencer = ({ videos }) => {
   const videoRef = useRef(null);

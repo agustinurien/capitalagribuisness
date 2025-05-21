@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import logoNav from "../assets/logoNav.png";
+import logoNavShort from "../assets/logoShort.png";
 ---
 
 <div class="navbarContainer">
@@ -9,6 +10,7 @@ import logoNav from "../assets/logoNav.png";
     <div class="logoNavContainer">
       <a href="/"
         ><Image src={logoNav} alt="logo" width={1000} class="logoNav" />
+        <Image src={logoNavShort} alt="logo" width={1000} class="logoNavShort" />
       </a>
     </div>
     <div class="navbarContent">
@@ -28,6 +30,9 @@ import logoNav from "../assets/logoNav.png";
   </nav>
 
   <style>
+    .logoNavShort{
+      display: none;
+    }
     .logoNavContainer {
       width: 300px;
       height: 100%;
@@ -109,5 +114,44 @@ import logoNav from "../assets/logoNav.png";
       text-decoration: none;
       color: black;
     }
+    @media screen and (max-width: 1052px) {
+      .logoNavShort{
+        width: 100%;
+      height: 100%;
+      object-fit: contain;
+        display: flex;
+      }
+      .logoNav{
+        display: none;
+      }
+      .navbar{
+        padding: 5px 0px;
+      }
+      .navbarContent {
+      
+      padding-right: 20px;
+    }
+    .navbar .navbarSocial {
+      gap: 15px;
+      padding-right: 0px;
+    }
+    .navbar .navbarSocial li a {
+      font-size: 1.2rem;
+    }
+    
+    .navbar .navbarLinks a {
+      font-size: 0.7rem;
+    }
+    .logoNavContainer{
+      width: 100px;
+      padding: 10px 20px;
+      box-sizing: border-box;
+    }
+    }
+    @media screen and (max-width: 768px) {
+    .navbarContent{
+      display: none;
+    }
+  }
   </style>
 </div>

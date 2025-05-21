@@ -124,4 +124,45 @@ import logoBienvenido from "../assets/logoBienvenido.png";
     height: 30px;
     background-color: black;
   }
+  @media screen and (max-width: 1052px) {
+    .logoFooterContainer{
+      width: 80px;
+    }
+    .derechosText{
+      justify-content: center;
+      padding-left: 10px;
+    }
+    .derechosText h4{
+      font-size: 0.7rem;
+    }
+    .derechosText p{
+      font-size: 0.6rem;
+      padding-bottom: 0px;
+    }
+    .contacto h4{
+      font-size: 0.8rem;
+    }
+    .contacto p{
+      font-size: 0.5rem;
+    }
+  }
+    @media screen and (max-width: 768px) {
+      .footerContainer{
+        width: 100%;
+        flex-direction: column-reverse;
+        height: fit-content;
+      }
+      .contacto{
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .derechos{
+        width: 100%;
+        padding-bottom: 20px;
+      }
+    .logoFooterContainer{
+      padding-left: 12px;
+    }
+  }
 </style>
