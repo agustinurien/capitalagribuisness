@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import logoNav from "../assets/logoNav.png";
 import logoNavShort from "../assets/logoShort.png";
+import NavbarHamburguesa from "./NavbarHamburguesa";
 ---
 
 <div class="navbarContainer">
@@ -13,6 +14,9 @@ import logoNavShort from "../assets/logoShort.png";
         <Image src={logoNavShort} alt="logo" width={1000} class="logoNavShort" />
       </a>
     </div>
+
+      
+
     <div class="navbarContent">
       <ul class="navbarLinks">
         <li><a href="/finanzas/Finanzas">FINANZAS</a></li>
@@ -27,9 +31,15 @@ import logoNavShort from "../assets/logoShort.png";
         <li><a href="/contact"><FaTwitter /></a></li>
       </ul>
     </div>
+    <div class="navbarHamburguesa">
+      <NavbarHamburguesa client:load/>
+    </div>
   </nav>
-
+</div>
   <style>
+    .navbarHamburguesa {
+      display: none;
+    }
     .logoNavShort{
       display: none;
     }
@@ -149,9 +159,12 @@ import logoNavShort from "../assets/logoShort.png";
     }
     }
     @media screen and (max-width: 768px) {
+      .navbarHamburguesa {
+      display: flex;
+    }
     .navbarContent{
       display: none;
     }
   }
   </style>
-</div>
+

@@ -55,3 +55,20 @@ button {
   font-family: "NotoSansBold", sans-serif;
   font-weight: 700;
 }
+@media screen and (max-width: 1052px) {
+  .formContainer {
+    width: 100%;
+    padding: 50px 0px;
+  }
+  .formContainer h2 {
+    font-size: 2.2rem;
+    margin-top: 10px;
+  }
+  .formContainer h3 {
+    font-size: 1.5rem;
+  }
+  input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

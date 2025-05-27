@@ -1,0 +1,90 @@
+.contenedor{
+    padding-right: 20px;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorHamburguesa2{
+    background-color: rgba(212, 69, 69, 0);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 20px;
+}
+.contenedorHamburguesa2 button{
+    background-color: rgba(0, 0, 255, 0);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+}
+.contenedorHamburguesa button{
+    background-color: rgba(0, 0, 255, 0);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: black;
+}
+.navbarMenu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 1000;
+}
+.navbarLinks2{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+
+}
+.navbarLinks2 a{
+    text-decoration: none;
+    color: black;
+    font-family: "NotoSansRegular", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+}
+.navbarSocial2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    list-style: none;
+    
+    color: black;
+    
+}
+.navbarSocial2 a{
+    text-decoration: none;
+    color: black;
+    font-family: "NotoSansRegular", sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    
+}
