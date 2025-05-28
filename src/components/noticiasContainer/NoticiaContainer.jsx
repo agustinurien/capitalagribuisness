@@ -49,12 +49,15 @@ const NoticiaContainer = () => {
                 className="noticiaImageDetail"
               />
             </div>
-            <p style={{margin: 0, color: "gray", paddingTop: 20}}>{selectedPost.Parrafo}</p>
+            {selectedPost.Parrafo.split('\n').map((linea, i) => (
+              <p key={i} style={{margin: 0, color: "gray", paddingTop: 10}}>{linea}</p>
+
+            ))}
           </div>
         </div>
       )}
       {posts.map((post) => (
-        <>
+        
         <div key={post.id} onClick={() => setOpen(post.id)} className="noticia">
           <div className="noticiaImage">
             <img
@@ -73,7 +76,6 @@ const NoticiaContainer = () => {
 
           </div>
         </div>
-                </>
       ))}
     </div>
   );
