@@ -14,7 +14,7 @@ import NoticiaContainer from "../components/noticiasContainer/NoticiaContainer";
   <style>
     h1 {
       background-color: rgb(255, 255, 255);
-      width: 50%;
+      width: 70%;
       color: #000;
       font-size: 2rem;
       text-align: center;
@@ -35,7 +35,7 @@ import NoticiaContainer from "../components/noticiasContainer/NoticiaContainer";
     }
     .noticiasContainer {
       background-color: rgb(255, 255, 255);
-      width: 50%;
+      width: 70%;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -45,5 +45,14 @@ import NoticiaContainer from "../components/noticiasContainer/NoticiaContainer";
       padding: 40px;
       box-sizing: border-box;
     }
+    @media  screen and (max-width: 1052px) {
+      h1 {
+      width: 90%;
+    }
+    .noticiasContainer {
+      
+      width: 90%;
+    }
+  }
   </style>
 </Layout>

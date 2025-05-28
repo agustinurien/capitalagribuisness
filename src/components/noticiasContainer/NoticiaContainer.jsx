@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchBlogPosts } from "../../utils/firebaseUtils";
-import "./NoticiaContainer.css";
+import "./noticiaContainer.css";
 import { IoCloseSharp } from "react-icons/io5";
 
 const NoticiaContainer = () => {
@@ -29,11 +29,18 @@ const NoticiaContainer = () => {
       {open && selectedPost && (
         <div className="noticiaDetail">
           <div className="noticiaDetailContent">
+            
             <div className="noticiaDetailHeader">
               <h2>{selectedPost.Titulo}</h2>
               <button onClick={() => setOpen("")} className="closeButton">
                 <IoCloseSharp />
               </button>
+            </div>
+            <div>
+              <p style={{margin: 0, color: "gray", width: "80%", paddingBottom: 20}}>{selectedPost.Resumen}</p>
+            </div>
+            <div>
+              <p style={{margin: 0, color: "gray", paddingBottom: 20}}>Fecha: {selectedPost.Fecha}</p>
             </div>
             <div className="imgNoticiaContainer">
               <img
@@ -42,18 +49,31 @@ const NoticiaContainer = () => {
                 className="noticiaImageDetail"
               />
             </div>
-            <p>{selectedPost.Parrafo}</p>
+            <p style={{margin: 0, color: "gray", paddingTop: 20}}>{selectedPost.Parrafo}</p>
           </div>
         </div>
       )}
       {posts.map((post) => (
+        <>
         <div key={post.id} onClick={() => setOpen(post.id)} className="noticia">
-          <div className="noticiaImage"></div>
+          <div className="noticiaImage">
+            <img
+                src={post.imagenDestacada}
+                alt={post.Titulo}
+                className="noticiaImageDetail"
+                />
+          </div>
           <div className="noticiaContent">
+            <div>
             <h2>{post.Titulo}</h2>
             <p>{post.Resumen}</p>
+            </div>
+            <p className="fecha">{post.Fecha}</p>
+            
+
           </div>
         </div>
+                </>
       ))}
     </div>
   );

@@ -4,19 +4,20 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
-
-  width: 100%;
+  
+  
 }
 .noticia {
   display: flex;
-  padding: 20px;
-  background-color: rgb(243, 243, 243);
+  padding: 20px 0px;
+  background-color: rgba(243, 243, 243, 0);
   cursor: pointer;
+  border-bottom: 2px solid black;
 }
 .noticiaImage {
-  background-color: red;
-  width: 300px;
-  height: 200px;
+  background-color: rgb(166, 166, 166);
+  width: 400px;
+  height: 240px;
 }
 .noticiaImageDetail {
   width: 100%;
@@ -26,16 +27,21 @@
 .noticiaContent {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 20px;
+  padding: 0px 20px;
+ 
   width: 50%;
 }
 .noticiaContent h2 {
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   margin: 0px;
   font-size: 2rem;
+}
+.noticiaContent .fecha{
+  padding-top: 5px;
+  color: rgb(148, 148, 148);
 }
 .noticiaContent p {
   margin: 0px;
@@ -52,6 +58,7 @@
   background-color: rgb(255, 255, 255);
 }
 .noticiaDetailContent {
+  padding-bottom: 50px;
 }
 .noticiaDetailHeader {
   background-color: rgba(255, 255, 255, 0.274);
@@ -63,6 +70,7 @@
 }
 .noticiaDetailHeader h2 {
   font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 .noticiaDetailHeader button {
   display: flex;
@@ -79,7 +87,27 @@
   cursor: pointer;
 }
 .imgNoticiaContainer {
-  height: 400px;
+  height: 500px;
   width: 100%;
-  background-color: red;
+  background-color: rgb(183, 183, 183);
+  margin-bottom: 15px;
+}
+@media  screen and (max-width: 768px) {
+  .noticia{
+    flex-direction: column;
+  }
+  .noticiaContent{
+    padding: 20px 0px;
+    padding-bottom: 0px;
+    width: 100%;
+  }
+  .noticiaContent p{
+    padding-bottom: 20px;
+  }
+  .noticiaContent .fecha{
+    padding-bottom: 0px;
+  }
+  .noticiaImage{
+    width: 100%;
+  }
 }
