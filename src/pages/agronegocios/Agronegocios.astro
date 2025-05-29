@@ -93,7 +93,7 @@ const videoList = [
     <div class="servicio">
       <div class="icon"><FaLeaf /></div>
       <div class="servicioText">
-        <h2>NUESTROS SERVICIOS <br /> EN FINANZAS</h2>
+        <h2>NUESTROS SERVICIOS <br /> EN AGRONEGOCIOS</h2>
       </div>
     </div>
 
@@ -279,53 +279,53 @@ const videoList = [
       font-size: 0.8rem;
     }
     @media screen and (max-width: 1052px) {
-    .videoContainer {
-    position: relative;
-    background-color: rgb(0, 0, 0);
-    box-sizing: border-box;
-  }
-  .icon {
-      font-size: 3rem;
-      width: 80px;
-      height: 80px;
-      border: 5px solid white;
-      margin-right: 5%;
+      .videoContainer {
+        position: relative;
+        background-color: rgb(0, 0, 0);
+        box-sizing: border-box;
+      }
+      .icon {
+        font-size: 3rem;
+        width: 80px;
+        height: 80px;
+        border: 5px solid white;
+        margin-right: 5%;
+      }
+      .servicio {
+        height: 250px;
+      }
+      .servicioText {
+        width: 60%;
+      }
+      .servicioText h2 {
+        font-size: 2rem;
+      }
     }
-    .servicio{
-      height: 250px;
+    @media screen and (max-width: 768px) {
+      .servicioText {
+        padding-left: 0px;
+      }
+      .servicioText h2 {
+        font-size: 1.5rem;
+      }
+      .icon {
+        margin-left: 12%;
+      }
+      .iconContainer {
+        border-right: 0px;
+        width: 100%;
+        height: 80px;
+      }
+      .item {
+        width: 90%;
+        height: fit-content;
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: column;
+      }
+      .textItem {
+        box-sizing: border-box;
+      }
     }
-    .servicioText{
-      width: 60%;
-    }
-    .servicioText h2 {
-      font-size: 2rem;
-    }
-}
-@media screen and (max-width: 768px) {
-    .servicioText{
-      padding-left: 0px;
-    }
-    .servicioText h2 {
-      font-size: 1.5rem;
-    }
-    .icon{
-      margin-left: 12%;
-    }
-    .iconContainer{
-      border-right: 0px;
-      width: 100%;
-      height: 80px;
-    }
-    .item{
-      width: 90%;
-      height: fit-content;
-      padding: 20px 0px;
-      display: flex;
-      flex-direction: column;
-    }
-    .textItem{
-      box-sizing: border-box;
-    }
-  }
   </style>
 </Layout>
