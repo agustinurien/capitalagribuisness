@@ -4,15 +4,13 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  
-  
 }
 .noticia {
   display: flex;
-  padding: 20px 0px;
+  padding: 0px 0px;
   background-color: rgba(243, 243, 243, 0);
   cursor: pointer;
-  border-bottom: 2px solid black;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.181);
 }
 .noticiaImage {
   background-color: rgb(166, 166, 166);
@@ -29,8 +27,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 0px 20px;
- 
+  padding: 20px 20px;
+
   width: 50%;
 }
 .noticiaContent h2 {
@@ -38,13 +36,18 @@
   padding-bottom: 15px;
   margin: 0px;
   font-size: 2rem;
+  font-family: "NotoSerifBold", serif;
+  font-weight: 700;
 }
-.noticiaContent .fecha{
+.noticiaContent .fecha {
   padding-top: 5px;
   color: rgb(148, 148, 148);
 }
 .noticiaContent p {
   margin: 0px;
+  font-family: "NotoSerifRegular", serif;
+  font-weight: 400;
+  font-size: 0.8rem;
 }
 .noticiaDetail {
   position: absolute;
@@ -52,12 +55,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(220, 220, 220);
 }
 .noticiaDetail {
   background-color: rgb(255, 255, 255);
+  height: fit-content;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.139);
 }
 .noticiaDetailContent {
+  padding: 20px;
   padding-bottom: 50px;
 }
 .noticiaDetailHeader {
@@ -71,6 +76,8 @@
 .noticiaDetailHeader h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  font-family: "NotoSansBold", serif;
+  font-weight: 700;
 }
 .noticiaDetailHeader button {
   display: flex;
@@ -92,22 +99,23 @@
   background-color: rgb(183, 183, 183);
   margin-bottom: 15px;
 }
-@media  screen and (max-width: 768px) {
-  .noticia{
+@media screen and (max-width: 768px) {
+  .noticia {
     flex-direction: column;
   }
-  .noticiaContent{
-    padding: 20px 0px;
-    padding-bottom: 0px;
+  .noticiaContent {
+    padding: 20px 20px;
+    padding-bottom: 20px;
     width: 100%;
+    box-sizing: border-box;
   }
-  .noticiaContent p{
+  .noticiaContent p {
     padding-bottom: 20px;
   }
-  .noticiaContent .fecha{
+  .noticiaContent .fecha {
     padding-bottom: 0px;
   }
-  .noticiaImage{
+  .noticiaImage {
     width: 100%;
   }
 }

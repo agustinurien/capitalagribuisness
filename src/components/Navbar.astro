@@ -11,11 +11,14 @@ import NavbarHamburguesa from "./NavbarHamburguesa";
     <div class="logoNavContainer">
       <a href="/"
         ><Image src={logoNav} alt="logo" width={1000} class="logoNav" />
-        <Image src={logoNavShort} alt="logo" width={1000} class="logoNavShort" />
+        <Image
+          src={logoNavShort}
+          alt="logo"
+          width={1000}
+          class="logoNavShort"
+        />
       </a>
     </div>
-
-      
 
     <div class="navbarContent">
       <ul class="navbarLinks">
@@ -26,119 +29,122 @@ import NavbarHamburguesa from "./NavbarHamburguesa";
         <li><a href="/Contact">CONTACTO</a></li>
       </ul>
       <ul class="navbarSocial">
-        <li><a href="/contact"><FaInstagram /></a></li>
-        <li><a href="/contact"><FaLinkedin /></a></li>
-        <li><a href="/contact"><FaTwitter /></a></li>
+        <li><a href="/"><FaInstagram /></a></li>
+        <li><a href="/"><FaLinkedin /></a></li>
+        <li>
+          <a href="https://x.com/capitalagri?s=21&t=N6O3sLaMY7FiHuMI7-2Wig"
+            ><FaTwitter /></a
+          >
+        </li>
       </ul>
     </div>
     <div class="navbarHamburguesa">
-      <NavbarHamburguesa client:load/>
+      <NavbarHamburguesa client:load />
     </div>
   </nav>
 </div>
-  <style>
-    .navbarHamburguesa {
-      display: none;
-    }
-    .logoNavShort{
-      display: none;
-    }
-    .logoNavContainer {
-      width: 300px;
-      height: 100%;
-      padding: 0px 20px;
-    }
-    .logoNavContainer a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-    }
-    .logoNavContainer .logoNav {
+<style>
+  .navbarHamburguesa {
+    display: none;
+  }
+  .logoNavShort {
+    display: none;
+  }
+  .logoNavContainer {
+    width: 300px;
+    height: 100%;
+    padding: 0px 20px;
+  }
+  .logoNavContainer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .logoNavContainer .logoNav {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .navbarContainer {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .navbar {
+    padding: 0px 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+  }
+  .navbarContent {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    padding-right: 50px;
+  }
+  .navbar .navbarLinks {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    height: 100%;
+    margin: 0px;
+  }
+  .navbar .navbarLinks a {
+    font-size: 0.9rem;
+    font-family: "NotoSansBold", sans-serif;
+    font-weight: 700;
+    color: black;
+  }
+  .navbar .navbarSocial {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    height: 100%;
+    margin: 0px;
+  }
+  .navbar .navbarSocial li a {
+    font-size: 1.3rem;
+  }
+  .navbar li a {
+    text-decoration: none;
+    color: black;
+  }
+  @media screen and (max-width: 1052px) {
+    .logoNavShort {
       width: 100%;
       height: 100%;
       object-fit: contain;
-    }
-    .navbarContainer {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-
-      width: 100%;
-      height: 80px;
       display: flex;
-      justify-content: space-around;
-      align-items: center;
-      box-sizing: border-box;
+    }
+    .logoNav {
+      display: none;
     }
     .navbar {
-      padding: 0px 30px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      background-color: rgb(255, 255, 255);
-      box-sizing: border-box;
+      padding: 5px 0px;
     }
     .navbarContent {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      width: fit-content;
-      height: 100%;
-      padding-right: 50px;
-    }
-    .navbar .navbarLinks {
-      padding: 0px 20px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      gap: 30px;
-      list-style: none;
-      height: 100%;
-      margin: 0px;
-    }
-    .navbar .navbarLinks a {
-      font-size: 0.9rem;
-      font-family: "NotoSansBold", sans-serif;
-      font-weight: 700;
-      color: black;
-    }
-    .navbar .navbarSocial {
-      padding: 0px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      list-style: none;
-      height: 100%;
-      margin: 0px;
-    }
-    .navbar .navbarSocial li a {
-      font-size: 1.3rem;
-    }
-    .navbar li a {
-      text-decoration: none;
-      color: black;
-    }
-    @media screen and (max-width: 1052px) {
-      .logoNavShort{
-        width: 100%;
-      height: 100%;
-      object-fit: contain;
-        display: flex;
-      }
-      .logoNav{
-        display: none;
-      }
-      .navbar{
-        padding: 5px 0px;
-      }
-      .navbarContent {
-      
       padding-right: 20px;
     }
     .navbar .navbarSocial {
@@ -148,23 +154,22 @@ import NavbarHamburguesa from "./NavbarHamburguesa";
     .navbar .navbarSocial li a {
       font-size: 1.2rem;
     }
-    
+
     .navbar .navbarLinks a {
       font-size: 0.7rem;
     }
-    .logoNavContainer{
+    .logoNavContainer {
       width: 100px;
       padding: 10px 20px;
       box-sizing: border-box;
     }
-    }
-    @media screen and (max-width: 768px) {
-      .navbarHamburguesa {
+  }
+  @media screen and (max-width: 768px) {
+    .navbarHamburguesa {
       display: flex;
     }
-    .navbarContent{
+    .navbarContent {
       display: none;
     }
   }
-  </style>
-
+</style>

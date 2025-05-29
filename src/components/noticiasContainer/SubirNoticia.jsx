@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { uploadBlogPost } from "../../utils/firebaseUtils";
 import "./subirNoticia.css";
+import imageCompression from "browser-image-compression";
 
 const CLOUD_NAME = "dxad6416z";
 const UPLOAD_PRESET = "noticias_unsigned";
@@ -15,8 +16,16 @@ const SubirNoticia = () => {
   const [loading, setLoading] = useState(false);
 
   const subirImagenACloudinary = async (file) => {
+    const options = {
+      maxSizeMB: 1, // peso máximo deseado (en MB)
+      maxWidthOrHeight: 1024, // opcional: reducir resolución
+      useWebWorker: true,
+    };
+
+    const compressedFile = await imageCompression(file, options);
+
     const formData = new FormData();
-    formData.append("file", file);
+    formData.append("file", compressedFile);
     formData.append("upload_preset", UPLOAD_PRESET);
 
     const res = await fetch(

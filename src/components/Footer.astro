@@ -34,7 +34,7 @@ import logoBienvenido from "../assets/logoBienvenido.png";
       </p>
     </div>
   </div>
-  <div class="espaciado"></div>
+  <div class="espaciado">Desarrollado por TAPE Producciones</div>
 </>
 
 <style>
@@ -121,47 +121,53 @@ import logoBienvenido from "../assets/logoBienvenido.png";
     opacity: 0.4;
   }
   .espaciado {
-    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
     background-color: black;
+    color: rgba(255, 255, 255, 0.361);
+    font-family: "NotoSansBold", serif;
+    font-weight: 700;
   }
   @media screen and (max-width: 1052px) {
-    .logoFooterContainer{
+    .logoFooterContainer {
       width: 80px;
     }
-    .derechosText{
+    .derechosText {
       justify-content: center;
       padding-left: 10px;
     }
-    .derechosText h4{
+    .derechosText h4 {
       font-size: 0.7rem;
     }
-    .derechosText p{
+    .derechosText p {
       font-size: 0.6rem;
       padding-bottom: 0px;
     }
-    .contacto h4{
+    .contacto h4 {
       font-size: 0.8rem;
     }
-    .contacto p{
+    .contacto p {
       font-size: 0.5rem;
     }
   }
-    @media screen and (max-width: 768px) {
-      .footerContainer{
-        width: 100%;
-        flex-direction: column-reverse;
-        height: fit-content;
-      }
-      .contacto{
-        padding: 20px;
-        width: 100%;
-        box-sizing: border-box;
-      }
-      .derechos{
-        width: 100%;
-        padding-bottom: 20px;
-      }
-    .logoFooterContainer{
+  @media screen and (max-width: 768px) {
+    .footerContainer {
+      width: 100%;
+      flex-direction: column-reverse;
+      height: fit-content;
+    }
+    .contacto {
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .derechos {
+      width: 100%;
+      padding-bottom: 20px;
+    }
+    .logoFooterContainer {
       padding-left: 12px;
     }
   }
