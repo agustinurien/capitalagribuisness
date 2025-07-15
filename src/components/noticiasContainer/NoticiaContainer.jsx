@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchBlogPosts } from "../../utils/firebaseUtils";
+import { fetchBlogPosts } from "../../pages/[lang]/utils/firebaseUtils";
 import "./noticiaContainer.css";
 import { IoCloseSharp } from "react-icons/io5";
 
@@ -29,7 +29,6 @@ const NoticiaContainer = () => {
       {open && selectedPost && (
         <div className="noticiaDetail">
           <div className="noticiaDetailContent">
-            
             <div className="noticiaDetailHeader">
               <h2>{selectedPost.Titulo}</h2>
               <button onClick={() => setOpen("")} className="closeButton">
@@ -37,10 +36,21 @@ const NoticiaContainer = () => {
               </button>
             </div>
             <div>
-              <p style={{margin: 0, color: "gray", width: "80%", paddingBottom: 20}}>{selectedPost.Resumen}</p>
+              <p
+                style={{
+                  margin: 0,
+                  color: "gray",
+                  width: "80%",
+                  paddingBottom: 20,
+                }}
+              >
+                {selectedPost.Resumen}
+              </p>
             </div>
             <div>
-              <p style={{margin: 0, color: "gray", paddingBottom: 20}}>Fecha: {selectedPost.Fecha}</p>
+              <p style={{ margin: 0, color: "gray", paddingBottom: 20 }}>
+                Fecha: {selectedPost.Fecha}
+              </p>
             </div>
             <div className="imgNoticiaContainer">
               <img
@@ -49,31 +59,29 @@ const NoticiaContainer = () => {
                 className="noticiaImageDetail"
               />
             </div>
-            {selectedPost.Parrafo.split('\n').map((linea, i) => (
-              <p key={i} style={{margin: 0, color: "gray", paddingTop: 10}}>{linea}</p>
-
+            {selectedPost.Parrafo.split("\n").map((linea, i) => (
+              <p key={i} style={{ margin: 0, color: "gray", paddingTop: 10 }}>
+                {linea}
+              </p>
             ))}
           </div>
         </div>
       )}
       {posts.map((post) => (
-        
         <div key={post.id} onClick={() => setOpen(post.id)} className="noticia">
           <div className="noticiaImage">
             <img
-                src={post.imagenDestacada}
-                alt={post.Titulo}
-                className="noticiaImageDetail"
-                />
+              src={post.imagenDestacada}
+              alt={post.Titulo}
+              className="noticiaImageDetail"
+            />
           </div>
           <div className="noticiaContent">
             <div>
-            <h2>{post.Titulo}</h2>
-            <p>{post.Resumen}</p>
+              <h2>{post.Titulo}</h2>
+              <p>{post.Resumen}</p>
             </div>
             <p className="fecha">{post.Fecha}</p>
-            
-
           </div>
         </div>
       ))}

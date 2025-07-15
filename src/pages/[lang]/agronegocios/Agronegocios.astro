@@ -1,67 +1,21 @@
 ---
 import { Image } from "astro:assets";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../../../layouts/Layout.astro";
 import { FaRegCheckCircle, FaLeaf } from "react-icons/fa";
 
-import download from "../../assets/agronegocios/download.png";
-import download1 from "../../assets/agronegocios/download-1.png";
-import download2 from "../../assets/agronegocios/download-2.png";
-import download3 from "../../assets/agronegocios/download-3.png";
-import download4 from "../../assets/agronegocios/download-4.png";
-import download5 from "../../assets/agronegocios/download-5.png";
-import download6 from "../../assets/agronegocios/download-6.png";
-import download7 from "../../assets/agronegocios/download-7.png";
-import VideoSequencer from "../../components/VideoSequencer";
-
-const items = [
-  {
-    title: "ASESORAMIENTO EN MERCADOS AGRÍCOLAS",
-    icon: download,
-    description:
-      "En un mercado volátil y de alto riesgo, con una participación creciente de actores dentro y fuera del sector, brindamos asesoramiento estratégico para que usted decida cuándo, cómo y dónde comprar o vender.",
-  },
-  {
-    title: "ESTRATEGIAS DE COBERTURA DE PRECIOS DE GRANOS",
-    icon: download1,
-    description:
-      "Obtención de financiamiento a través del ecosistema del mercado de capitales:  Cauciones bursátiles. Cheques de pago diferido (avalados por SGR o bancarios), garantizados y no garantizados. Pagarés bursátiles. Facturas de crédito electrónica.",
-  },
-  {
-    title: "FINANCIACIONES & COLOCACIONES",
-    icon: download2,
-    description:
-      "Alternativas de Financiación y Colocación para el sector de Agronegocios.",
-  },
-  {
-    title: "CRÉDITOS DE CARBONO / ENERGÍAS RENOVABLES",
-    icon: download3,
-    description:
-      "Reducción de la huella de carbono. Certificación, desarrollo y registro de proyectos de generación de créditos de carbono. Comercialización de créditos de carbono.",
-  },
-  {
-    title: "MERCADO DE FUTUROS Y OPCIONES",
-    icon: download4,
-    description: "",
-  },
-  {
-    title: "COMERCIALIZACIÓN DE GRANOS",
-    icon: download5,
-    description:
-      "Ofrecemos la posibilidad de operar en distintos mercados: físicos y de futuros en Argentina, en el mercado FOB, y en el mercado de futuros internacional. Brindamos servicios de ejecución, administración y clearing a través de una de las empresas de mayor reputación, experiencia y trayectoria del mercado.",
-  },
-  {
-    title: "WARRANTS ELECTRÓNICOS",
-    icon: download6,
-    description:
-      "Herramienta financiera innovadora diseñada para facilitar el acceso al crédito mediante garantías y reducción de costos. Es un título de crédito digital que certifica la posesión de una determinada cantidad y calidad de productos agropecuarios almacenados en un depósito autorizado. Funciona como un recibo que garantiza la existencia y propiedad de esos bienes.",
-  },
-  {
-    title: "INVERSIONES EN AGRONEGOCIOS",
-    icon: download7,
-    description:
-      "Ofrecemos oportunidades de inversión en el sector agropecuario, orientadas a generar rentabilidad a través del desarrollo, producción y comercialización de productos del agro. Diseñamos estrategias a medida para maximizar el valor de cada proyecto, combinando innovación, gestión de riesgos y conocimiento del mercado.",
-  },
-];
+import download from "../../../assets/agronegocios/download.png";
+import download1 from "../../../assets/agronegocios/download-1.png";
+import download2 from "../../../assets/agronegocios/download-2.png";
+import download3 from "../../../assets/agronegocios/download-3.png";
+import download4 from "../../../assets/agronegocios/download-4.png";
+import download5 from "../../../assets/agronegocios/download-5.png";
+import download6 from "../../../assets/agronegocios/download-6.png";
+import download7 from "../../../assets/agronegocios/download-7.png";
+import VideoSequencer from "../../../components/VideoSequencer";
+// src/pages/[lang]/index.astro
+export async function getStaticPaths() {
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}
 
 import video1 from "/videos/video1.mp4";
 import video2 from "/videos/gestionRiesgo.mp4";
@@ -80,6 +34,54 @@ const videoList = [
   },
   {
     src: video4,
+  },
+];
+
+const { lang } = Astro.params;
+const translations = await import(
+  `../../../i18n/locales/${lang}/translation.json`
+);
+
+const items = [
+  {
+    title: translations.agro_asesoramiento_titulo,
+    icon: download,
+    description: translations.agro_asesoramiento_text,
+  },
+  {
+    title: translations.agro_financiaciones_titulo,
+    icon: download1,
+    description: translations.agro_financiaciones_text,
+  },
+  {
+    title: translations.agro_servicios_titulo,
+    icon: download2,
+    description: translations.agro_servicios_text,
+  },
+  {
+    title: translations.agro_banca_titulo,
+    icon: download3,
+    description: translations.agro_banca_text,
+  },
+  {
+    title: translations.agro_inversiones_titulo,
+    icon: download4,
+    description: "",
+  },
+  {
+    title: translations.agro_granos_titulo,
+    icon: download5,
+    description: translations.agro_granos_text,
+  },
+  {
+    title: translations.agro_estructuras_titulo,
+    icon: download6,
+    description: translations.agro_estructuras_text,
+  },
+  {
+    title: translations.agro_coaching_titulo,
+    icon: download7,
+    description: translations.agro_coaching_text,
   },
 ];
 ---
@@ -152,7 +154,7 @@ const videoList = [
           rgba(0, 0, 0, 0.989) 30%,
           rgba(225, 25, 25, 0)
         ),
-        url(../../assets/farm.jpg);
+        url(../../../assets/farm.jpg);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;

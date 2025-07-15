@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { uploadBlogPost } from "../../utils/firebaseUtils";
+import { uploadBlogPost } from "../../pages/[lang]/utils/firebaseUtils";
 import "./subirNoticia.css";
 import imageCompression from "browser-image-compression";
 

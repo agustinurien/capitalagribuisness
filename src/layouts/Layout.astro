@@ -1,6 +1,11 @@
 ---
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
+export async function getStaticPaths() {
+  return [{ params: { lang: "en" } }, { params: { lang: "es" } }];
+}
+
+const { lang } = Astro.params;
 ---
 
 <!doctype html>
@@ -10,13 +15,14 @@ import Navbar from "../components/Navbar.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logoShort.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>Capital Agribuisness | </title>
+    <title>Capital Agribuisness |</title>
   </head>
-  <Navbar />
+
+  <Navbar lang={lang} />
   <body>
     <slot />
   </body>
-  <Footer />
+  <Footer lang={lang} />
 </html>
 
 <style is:global>

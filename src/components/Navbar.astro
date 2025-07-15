@@ -4,12 +4,16 @@ import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import logoNav from "../assets/logoNav.png";
 import logoNavShort from "../assets/logoShort.png";
 import NavbarHamburguesa from "./NavbarHamburguesa";
+import Idioma from "../components/idioma/Idioma";
+
+const { lang } = Astro.params;
+const translations = await import(`../i18n/locales/${lang}/translation.json`);
 ---
 
 <div class="navbarContainer">
   <nav class="navbar">
     <div class="logoNavContainer">
-      <a href="/"
+      <a href={`/${lang}`}
         ><Image src={logoNav} alt="logo" width={1000} class="logoNav" />
         <Image
           src={logoNavShort}
@@ -22,11 +26,23 @@ import NavbarHamburguesa from "./NavbarHamburguesa";
 
     <div class="navbarContent">
       <ul class="navbarLinks">
-        <li><a href="/finanzas/Finanzas">FINANZAS</a></li>
-        <li><a href="/agronegocios/Agronegocios">AGRONEGOCIOS</a></li>
-        <li><a href="/Nosotros">NOSOTROS</a></li>
-        <li><a href="/Noticias">NOTICIAS</a></li>
-        <li><a href="/Contact">CONTACTO</a></li>
+        <li>
+          <a href={`/${lang}/finanzas/Finanzas`}>{translations.navbar_inicio}</a
+          >
+        </li>
+        <li>
+          <a href={`/${lang}/agronegocios/Agronegocios`}
+            >{translations.navbar_agronegocios}</a
+          >
+        </li>
+        <li>
+          <a href={`/${lang}/Nosotros`}>{translations.navbar_nosotros}</a>
+        </li>
+        <li>
+          <a href={`/${lang}/Noticias`}>{translations.navbar_noticias}</a>
+        </li>
+        <li><a href={`/${lang}/Contact`}>{translations.navbar_contacto}</a></li>
+        <Idioma client:load />
       </ul>
       <ul class="navbarSocial">
         <li><a href="/"><FaInstagram /></a></li>

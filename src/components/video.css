@@ -1,7 +1,18 @@
-.videoContainer{
-    
-    width: 100%;
+.videoContainer {
+  width: 100%;
 }
-.videoPlayer{
-    width: 100%;
+.videoPlayer {
+  width: 100%;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+
+  z-index: 1000;
+}
+.controls button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
 }

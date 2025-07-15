@@ -1,68 +1,22 @@
 ---
 import { Image } from "astro:assets";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../../../layouts/Layout.astro";
 import { FaRegCheckCircle } from "react-icons/fa";
 
-import icon1 from "../../assets/icon1.png";
-import icon2 from "../../assets/icon2.png";
-import icon3 from "../../assets/icon3.png";
-import icon4 from "../../assets/icon4.png";
-import icon5 from "../../assets/icon5.png";
-import icon6 from "../../assets/icon6.png";
-import icon7 from "../../assets/icon7.png";
-import icon8 from "../../assets/icon8.png";
-import VideoSequencer from "../../components/VideoSequencer";
+import icon1 from "../../../assets/icon1.png";
+import icon2 from "../../../assets/icon2.png";
+import icon3 from "../../../assets/icon3.png";
+import icon4 from "../../../assets/icon4.png";
+import icon5 from "../../../assets/icon5.png";
+import icon6 from "../../../assets/icon6.png";
+import icon7 from "../../../assets/icon7.png";
+import icon8 from "../../../assets/icon8.png";
+import VideoSequencer from "../../../components/VideoSequencer";
 
-const items = [
-  {
-    title: "ASESORAMIENTO EN MERCADOS FINANCIEROS",
-    icon: icon1,
-    description:
-      "Asesoramiento sobre el mercado financiero local y global. Asesoramiento en inversiones tácticas y estratégicas. Administración de portafolios de inversión. Análisis de fondos de inversión, tanto mutuos como de inversiones alternativas. Administración de fondos de inversión.",
-  },
-  {
-    title: "FINANCIACIONES",
-    icon: icon2,
-    description:
-      "Obtención de financiamiento a través del ecosistema del mercado de capitales:  Cauciones bursátiles. Cheques de pago diferido (avalados por SGR o bancarios), garantizados y no garantizados. Pagarés bursátiles. Facturas de crédito electrónica.",
-  },
-  {
-    title: "SERVICIOS TRANSACCIONALES Y CASH MANAGEMENT",
-    icon: icon3,
-    description:
-      "Asesoramiento para operar en el ecosistema financiero, bancario y de inversiones. Asesoramiento y administración de liquidez y flujos monetarios.",
-  },
-  {
-    title: "BANCA DE INVERSIÓN / INVESTMENT BANKING",
-    icon: icon4,
-    description:
-      " Fusiones y adquisiciones (M&A): Asesoramiento a empresas en procesos de compra, venta o fusión con otras compañías.  Levantamiento de capital: Asistencia en la obtención de financiamiento mediante la emisión de acciones, bonos u otros instrumentos financieros. Reestructuración financiera: Asesoramiento a empresas en dificultades para reestructurar su deuda o capital.  Valoración de empresas: Determinación del valor de una empresa para diversos fines, como fusiones, adquisiciones o salidas a bolsa.",
-  },
-  {
-    title: "INVERSIONES EN REAL ESTATE / INMOBILIARIAS",
-    icon: icon5,
-    description:
-      "Oportunidades de inversión en el sector inmobiliario. Compra, venta, alquiler y desarrollo de propiedades con el objetivo de generar ganancias a través de la apreciación del valor o la renta obtenida por los alquileres.  Inversión financiera respaldada por activos inmobiliarios.",
-  },
-  {
-    title: "PRODUCTOS ESTRUCTURADOS DE INVERSIÓN",
-    icon: icon6,
-    description:
-      "Armado de productos financieros diseñados para incrementar la rentabilidad y acotar los riesgos, mejorando y optimizando la relación riesgo/beneficio.",
-  },
-  {
-    title: "ESTRUCTURAS LEGALES ALTERNATIVAS DE INVERSIÓN Y PLANIFICACIÓN",
-    icon: icon7,
-    description:
-      "Fideicomisos. Planificación financiera. Planificación sucesoria.",
-  },
-  {
-    title: "COACHING / CONSULTORÍA EMPRESARIAL & TRANSMISIÓN GENERACIONAL",
-    icon: icon8,
-    description:
-      "A través de una visión empresarial holística, abordamos el complejo sistema que integra a los accionistas y sus familias, el producto, el management y control, los empleados y el staff de asesores.",
-  },
-];
+// src/pages/[lang]/index.astro
+export async function getStaticPaths() {
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}
 
 import video1 from "/videos/01.mp4";
 import video2 from "/videos/02.mp4";
@@ -87,6 +41,53 @@ const videoList = [
     src: video5,
   },
 ];
+const { lang } = Astro.params;
+const translations = await import(
+  `../../../i18n/locales/${lang}/translation.json`
+);
+
+const items = [
+  {
+    title: translations.finanzas_asesoramiento_titulo,
+    icon: icon1,
+    description: translations.finanzas_asesoramiento_text,
+  },
+  {
+    title: translations.finanzas_financiaciones_titulo,
+    icon: icon2,
+    description: translations.finanzas_financiaciones_text,
+  },
+  {
+    title: translations.finanzas_servicios_titulo,
+    icon: icon3,
+    description: translations.finanzas_servicios_text,
+  },
+  {
+    title: translations.finanzas_banca_titulo,
+    icon: icon4,
+    description: translations.finanzas_banca_text,
+  },
+  {
+    title: translations.finanzas_inversiones_titulo,
+    icon: icon5,
+    description: translations.finanzas_inversiones_text,
+  },
+  {
+    title: translations.finanzas_productos_titulo,
+    icon: icon6,
+    description: translations.finanzas_productos_text,
+  },
+  {
+    title: translations.finanzas_estructuras_titulo,
+    icon: icon7,
+    description: translations.finanzas_estructuras_text,
+  },
+  {
+    title: translations.finanzas_coaching_titulo,
+    icon: icon8,
+    description: translations.finanzas_coaching_text,
+  },
+];
 ---
 
 <Layout>
@@ -98,8 +99,8 @@ const videoList = [
     <div class="servicio">
       <div class="icon">$</div>
       <div class="servicioText">
-        <h2>NUESTROS SERVICIOS <br /> EN FINANZAS</h2>
-        <h3>Para Individuos, Empresas & Corporaciones.</h3>
+        <h2>{translations.finanzas_titulo}</h2>
+        <h3>{translations.finanzas_subtitulo}</h3>
       </div>
     </div>
 
@@ -155,7 +156,7 @@ const videoList = [
     height: 300px;
     background-image:
       linear-gradient(to right, rgba(0, 0, 0, 0.989) 30%, rgba(0, 0, 0, 0)),
-      url(../../assets/finanzas.jpg);
+      url(../../../assets/finanzas.jpg);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -278,53 +279,52 @@ const videoList = [
   }
   @media screen and (max-width: 1052px) {
     .videoContainer {
-    position: relative;
-    background-color: rgb(0, 0, 0);
-    box-sizing: border-box;
-  }
-  .icon {
+      position: relative;
+      background-color: rgb(0, 0, 0);
+      box-sizing: border-box;
+    }
+    .icon {
       font-size: 3rem;
       width: 80px;
       height: 80px;
       border: 5px solid white;
       margin-right: 5%;
     }
-    .servicio{
+    .servicio {
       height: 250px;
     }
-    .servicioText{
+    .servicioText {
       width: 60%;
     }
     .servicioText h2 {
       font-size: 2rem;
     }
-}
+  }
 
   @media screen and (max-width: 768px) {
-    .servicioText{
+    .servicioText {
       padding-left: 0px;
     }
     .servicioText h2 {
       font-size: 1.5rem;
     }
-    .icon{
+    .icon {
       margin-left: 12%;
     }
-    .iconContainer{
+    .iconContainer {
       border-right: 0px;
       width: 100%;
       height: 80px;
     }
-    .item{
+    .item {
       width: 90%;
       height: fit-content;
       padding: 20px 0px;
       display: flex;
       flex-direction: column;
     }
-    .textItem{
+    .textItem {
       box-sizing: border-box;
     }
-
   }
 </style>

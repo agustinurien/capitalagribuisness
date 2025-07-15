@@ -9,10 +9,8 @@ import video3 from "/videos/03.mp4";
 import video4 from "/videos/04.mp4";
 import video5 from "/videos/05.mp4";
 
-import video6 from "/videos/video1.mp4";
+import video6 from "/videos/CoberturaRiesgos.mp4";
 import video7 from "/videos/gestionRiesgo.mp4";
-import video8 from "/videos/video1.mp4";
-import video9 from "/videos/video2.mp4";
 
 import VideoSequencer from "./VideoSequencer";
 
@@ -38,13 +36,9 @@ const videoList = [
   {
     src: video7,
   },
-  {
-    src: video8,
-  },
-  {
-    src: video9,
-  },
 ];
+const { lang } = Astro.props;
+const translations = await import(`../i18n/locales/${lang}/translation.json`);
 ---
 
 <div>
@@ -56,17 +50,17 @@ const videoList = [
   </div>
 
   <div class="heroContent">
-    <h2>MERCADOS FINANCIEROS Y AGRICOLAS</h2>
+    <h2>{translations.hero_titulo}</h2>
   </div>
 
   <div class="asesoramientosContainer">
-    <h3>Asesoramiento Especializado</h3>
+    <h3>{translations.hero_subtitulo}</h3>
     <h2 class="and">&</h2>
     <div class="finanzas">
-      <a href="/finanzas/Finanzas">FINANZAS</a>
+      <a href="/finanzas/Finanzas">{translations.hero_finanza}</a>
     </div>
     <div class="agronegocios">
-      <a href="/agronegocios/Agronegocios">AGRONEGOCIOS</a>
+      <a href="/agronegocios/Agronegocios">{translations.hero_agronegocios}</a>
     </div>
   </div>
 
@@ -80,12 +74,9 @@ const videoList = [
       />
     </div>
     <div class="bienvenidoText">
-      <h3>Bienvenido a Capital & Agribusiness</h3>
+      <h3>{translations.hero_bienvenido}</h3>
       <p>
-        Somos una red de profesionales con back-ground amplio y analítico.
-        Abarcando desde la Administración de Empresas, la Economía, Finanzas,
-        Investigación, los Agronegocios, el Mercado Inmobiliario y el Comercio
-        Exterior.
+        {translations.hero_bienvenido_desc}
       </p>
     </div>
   </div>
@@ -100,6 +91,7 @@ const videoList = [
     box-sizing: border-box;
   }
   .tituloContainer {
+    pointer-events: none;
     position: absolute;
     display: flex;
     justify-content: center;

@@ -1,24 +1,30 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
-import group from "../assets/group.png";
-import vision from "../assets/vision.png";
-import fortaleza from "../assets/fortaleza.png";
+import group from "../../assets/group.png";
+import vision from "../../assets/vision.png";
+import fortaleza from "../../assets/fortaleza.png";
 
-import expertise from "../assets/expertise.png";
-import experiencia from "../assets/experiencia.png";
-import valores from "../assets/valores.png";
-import vision2 from "../assets/visionIcon.png";
+import expertise from "../../assets/expertise.png";
+import experiencia from "../../assets/experiencia.png";
+import valores from "../../assets/valores.png";
+import vision2 from "../../assets/visionIcon.png";
 import { FaRegCheckCircle } from "react-icons/fa";
 
-import icon1 from "../assets/fortalezas/download.png";
-import icon2 from "../assets/fortalezas/download-1.png";
-import icon3 from "../assets/fortalezas/download-2.png";
-import icon4 from "../assets/fortalezas/download-3.png";
-import icon5 from "../assets/fortalezas/download-4.png";
-import icon6 from "../assets/fortalezas/download-5.png";
-import icon7 from "../assets/fortalezas/download-6.png";
+import icon1 from "../../assets/fortalezas/download.png";
+import icon2 from "../../assets/fortalezas/download-1.png";
+import icon3 from "../../assets/fortalezas/download-2.png";
+import icon4 from "../../assets/fortalezas/download-3.png";
+import icon5 from "../../assets/fortalezas/download-4.png";
+import icon6 from "../../assets/fortalezas/download-5.png";
+import icon7 from "../../assets/fortalezas/download-6.png";
+
+export async function getStaticPaths() {
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}
+
+const { lang } = Astro.params;
 
 const items = [
   {
@@ -675,106 +681,102 @@ const items = [
     width: 85%;
   }
 
-  @media  screen and (max-width: 768px) {
-    .expertiseContainer{
+  @media screen and (max-width: 768px) {
+    .expertiseContainer {
       width: 90%;
     }
-    .expertiseContent{
+    .expertiseContent {
       flex-direction: column;
     }
-    .expertiseText{
+    .expertiseText {
       width: 100%;
     }
-    .expertiseImage{
+    .expertiseImage {
       width: 100%;
       height: 170px;
     }
 
-    li p{
+    li p {
       font-size: 0.9rem;
     }
 
-    .experiencia{
+    .experiencia {
       width: 90%;
     }
-    .experienciaText{
+    .experienciaText {
       width: 100%;
     }
-    .experiencia h3{
+    .experiencia h3 {
       font-size: 1.5rem;
-      
-      
     }
-    .vision{
+    .vision {
       height: fit-content;
-      
     }
-    .visionContainer{
+    .visionContainer {
       width: 90%;
     }
-    .visionContent{
+    .visionContent {
       flex-direction: column;
     }
-    .visionText{
+    .visionText {
       width: 100%;
     }
-    .visionImage{
+    .visionImage {
       width: 100%;
       height: 130px;
     }
-    .visionText h3{
+    .visionText h3 {
       padding: 10px;
       font-size: 1rem;
     }
-    
-    .valores{
+
+    .valores {
       flex-direction: column-reverse;
       width: 90%;
     }
-    .valoresText{
+    .valoresText {
       width: 100%;
       padding-top: 20px;
     }
-    .valoresText h3{
+    .valoresText h3 {
       padding: 10px;
       font-size: 1rem;
     }
-    .valoresText p{
+    .valoresText p {
       font-size: 0.8rem;
     }
-    .valoresImage{
+    .valoresImage {
       width: 100%;
       height: 130px;
     }
-    .nosotros{
+    .nosotros {
       padding-left: 20px;
       padding-right: 0px;
     }
-    .visionValores{
+    .visionValores {
       padding-left: 20px;
       padding-right: 0px;
     }
-    .fortaleza{
+    .fortaleza {
       padding-left: 20px;
       padding-right: 0px;
     }
-    .servicio h2{
+    .servicio h2 {
       font-size: 2.1rem;
     }
-    .servicioText{
+    .servicioText {
       width: 100%;
     }
-  
-  .icon{
-    padding-right: 0px;
+
+    .icon {
+      padding-right: 0px;
+    }
+    .item {
+      width: 90%;
+      height: fit-content;
+      padding: 20px 0px;
+      display: flex;
+      flex-direction: column;
+    }
   }
-  .item{
-    width: 90%;
-    height: fit-content;
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-}
 </style>

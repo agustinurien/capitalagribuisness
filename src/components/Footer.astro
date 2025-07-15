@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import logoBienvenido from "../assets/logoBienvenido.png";
+const { lang } = Astro.props;
+const translations = await import(`../i18n/locales/${lang}/translation.json`);
 ---
 
 <>
@@ -18,19 +20,14 @@ import logoBienvenido from "../assets/logoBienvenido.png";
       </div>
       <div class="derechosText">
         <h4>capitalagribusiness.com</h4>
-        <p>Todos los Derechos Reservados 2012 - 2024</p>
+        <p>{translations.footer_derechos}</p>
       </div>
     </div>
 
     <div class="contacto">
       <h4>contacto@capitalagribusiness.com</h4>
       <p>
-        El contenido es a los únicos efectos informativos, la información o
-        noticias que se presenta no es una propuesta u oferta, ni la
-        confirmación de ninguna transacción, no pudiendo ser interpretada como
-        tales. El emisor no acepta responsabilidades por errores, omisiones o
-        interpretaciones erróneas respecto del contenido de este sitio y/o las
-        noticias suministradas.
+        {translations.footer_derechos2}
       </p>
     </div>
   </div>

@@ -1,0 +1,60 @@
+{
+  "navbar_inicio": "FINANCE",
+  "navbar_agronegocios": "AGRIBUSINESS",
+  "navbar_nosotros": "US",
+  "navbar_noticias": "NEWS",
+  "navbar_contacto": "CONTACT",
+
+  "hero_titulo": "FINANCIAL AND AGRICULTURAL MARKETS",
+  "hero_subtitulo": "Specialized Advice",
+  "hero_finanza": "FINANCE",
+  "hero_agronegocios": "AGRIBUSINESS",
+  "hero_bienvenido": "Welcome to Capital & Agribusiness",
+  "hero_bienvenido_desc": "We are a network of professionals with a broad and analytical background, spanning business administration, economics, finance, research, agribusiness, real estate, and foreign trade.",
+  "footer_derechos": "All Rights Reserved 2012 - 2025",
+  "footer_derechos2": "The content is for informational purposes only. The information or news presented is not a proposal or offer, nor a confirmation of any transaction, and may not be construed as such. The issuer accepts no liability for errors, omissions, or misinterpretations regarding the content of this site and/or the news provided.",
+
+  "finanzas_titulo": "OUR SERVICES IN FINANCE",
+  "finanzas_subtitulo": "For Individuals, Businesses & Corporations.",
+  "finanzas_asesoramiento_titulo": "FINANCIAL MARKET ADVICE",
+  "finanzas_asesoramiento_text": "Advice on local and global financial markets. Tactical & Strategic Investment Advice. Investment Portfolio Management. Analysis of Investment Funds, both Mutual and Alternative Investments. Investment Fund Management.",
+  "finanzas_financiaciones_titulo": "REAL ESTATE INVESTMENTS",
+  "finanzas_financiaciones_text": "Opportunities in the real estate sector. Purchase, sale, rental, and development of real estate properties with the goal of generating profit through appreciation in property values or rental income. Financial Investment backed by Real Estate Assets.",
+  "finanzas_servicios_titulo": "FINANCING",
+  "finanzas_servicios_text": "Obtaining financing through the capital market ecosystem. (Stock Market Guarantees, Deferred Payment Checks (guaranteed by a Securities Securities Depository or Bank), Guaranteed and Unguaranteed), Stock Market Notes, Electronic Credit Invoices.",
+  "finanzas_banca_titulo": "STRUCTURED INVESTMENT PRODUCTS",
+  "finanzas_banca_text": "Development of financial products that seek to increase profitability and reduce risks, improving and optimizing the risk/benefit ratio.",
+  "finanzas_inversiones_titulo": "TRANSACTIONAL SERVICES AND CASH MANAGEMENT",
+  "finanzas_inversiones_text": "Advice on navigating the financial, banking, and investment ecosystem. Liquidity and Monetary Flow Advice and Management.",
+  "finanzas_productos_titulo": "ALTERNATIVE LEGAL STRUCTURES FOR INVESTMENT AND PLANNING",
+  "finanzas_productos_text": "Trusts. Financial Planning. Succession Planning.",
+  "finanzas_estructuras_titulo": "INVESTMENT BANKING / INVESTMENT BANKING",
+  "finanzas_estructuras_text": "Mergers and Acquisitions (M&A): Advising companies in the process of purchasing, selling, or merging with other companies. Capital raising: Helping companies obtain financing through the issuance of shares, bonds, or other financial instruments. Financial Restructuring: Advising companies in financial difficulty to restructure their debt or capital. Business Valuation: Determining a company's value for various purposes, such as mergers, acquisitions, or IPOs.",
+  "finanzas_coaching_titulo": "COACHING / BUSINESS CONSULTING & GENERATIONAL TRANSMISSION",
+  "finanzas_coaching_text": "Through a holistic business view of the complex business system involving Shareholders and their families, Product, Management & Control, Employees, and Advisory Staff.",
+
+  "agro_titulo": "OUR SERVICES IN AGRIBUSINESS",
+
+  "agro_asesoramiento_titulo": "CONSULTING IN AGRICULTURAL MARKETS",
+  "agro_asesoramiento_text": "In a volatile and high-risk market, with increasing participation from both inside and outside the sector, we provide strategic advice so you can decide when, how, and where to buy or sell.",
+
+  "agro_financiaciones_titulo": "GRAIN PRICE HEDGING STRATEGIES",
+  "agro_financiaciones_text": "Obtaining financing through the capital market ecosystem: Stock guarantees. Deferred payment checks (guaranteed by SGR or bank), both secured and unsecured. Stock notes. Electronic credit invoices.",
+
+  "agro_servicios_titulo": "FINANCING & INSURANCE",
+  "agro_servicios_text": "Financing and Placement Alternatives for the Agribusiness Sector.",
+
+  "agro_banca_titulo": "CARBON CREDITS / RENEWABLE ENERGY",
+  "agro_banca_text": "Carbon footprint reduction. Certification, development, and registration of carbon credit generation projects. Carbon credit marketing.",
+
+  "agro_inversiones_titulo": "FUTURES AND OPTIONS MARKET",
+
+  "agro_granos_titulo": "GRAIN MARKETING",
+  "agro_granos_text": "We offer trading in various markets: physical and futures markets in Argentina, the FOB market, and the international futures market. We provide execution, administration, and clearing services through one of the most reputable, experienced, and long-standing firms in the market.",
+
+  "agro_estructuras_titulo": "ELECTRONIC WARRANTS",
+  "agro_estructuras_text": "An innovative financial tool designed to facilitate access to credit through guarantees and cost reduction. It is a digital credit title that certifies the possession of a certain quantity and quality of agricultural products stored in an authorized warehouse. It functions as a receipt that guarantees the existence and ownership of those goods.",
+
+  "agro_coaching_titulo": "INVESTMENTS IN AGRIBUSINESS",
+  "agro_coaching_text": "An innovative financial tool designed to facilitate access to credit through guarantees and cost reduction. It is a digital credit title that certifies the possession of a certain quantity and quality of agricultural products stored in an authorized warehouse. It functions as a receipt that guarantees the existence and ownership of those goods."
+}
