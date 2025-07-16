@@ -39,7 +39,7 @@
   "agro_asesoramiento_text": "In a volatile and high-risk market, with increasing participation from both inside and outside the sector, we provide strategic advice so you can decide when, how, and where to buy or sell.",
 
   "agro_financiaciones_titulo": "GRAIN PRICE HEDGING STRATEGIES",
-  "agro_financiaciones_text": "Obtaining financing through the capital market ecosystem: Stock guarantees. Deferred payment checks (guaranteed by SGR or bank), both secured and unsecured. Stock notes. Electronic credit invoices.",
+  "agro_financiaciones_text": "Analysis and Development of Strategies to Protect Final Sales Prices for Grains.",
 
   "agro_servicios_titulo": "FINANCING & INSURANCE",
   "agro_servicios_text": "Financing and Placement Alternatives for the Agribusiness Sector.",
@@ -56,5 +56,53 @@
   "agro_estructuras_text": "An innovative financial tool designed to facilitate access to credit through guarantees and cost reduction. It is a digital credit title that certifies the possession of a certain quantity and quality of agricultural products stored in an authorized warehouse. It functions as a receipt that guarantees the existence and ownership of those goods.",
 
   "agro_coaching_titulo": "INVESTMENTS IN AGRIBUSINESS",
-  "agro_coaching_text": "An innovative financial tool designed to facilitate access to credit through guarantees and cost reduction. It is a digital credit title that certifies the possession of a certain quantity and quality of agricultural products stored in an authorized warehouse. It functions as a receipt that guarantees the existence and ownership of those goods."
+  "agro_coaching_text": "An innovative financial tool designed to facilitate access to credit through guarantees and cost reduction. It is a digital credit title that certifies the possession of a certain quantity and quality of agricultural products stored in an authorized warehouse. It functions as a receipt that guarantees the existence and ownership of those goods.",
+
+  "nosotros_titulo": "ABOUT US",
+  "nosotros_expertise_text": "We are a network of professionals with a broad and analytical background, covering business administration, economics, finance, research, agribusiness, real estate, and foreign trade. We have a comprehensive and holistic vision, with analytical capacity, to understand a particular situation but always within a broad and diverse general vision and framework. We provide consulting services to businesses and individuals, maintaining stable and long-lasting relationships with our clients, built on deep trust and peace of mind.",
+
+  "nosotros_experiencia_titulo": "EXPERIENCE",
+  "nosotros_experiencia_text": "We have 30 years of experience in finance and agribusiness. This allows us to be flexible and adaptable to the changing world. We have a global vision and an innovative and entrepreneurial spirit.",
+
+  "valores_titulo": "VISION & VALUES",
+
+  "vision_titulo": "OUR VISION",
+  "vision_text": "To build close, long-term relationships with our clients, within a framework of trust, ethical integrity, transparency, confidentiality, service, and high professional standards, in all matters related to finance, agribusiness, real estate investments, and business coaching.",
+
+  "valores2_titulo": "OUR VALUES",
+  "valores2_text": "Trust and Service. Technicality and Professionalism. We pride ourselves on the professional quality of our work. Personal and ethical commitment. Integrity and honesty are at the heart of our business. Our clients' interests always come first. Our assets are our people and our reputation. We put passion into everything we do. We strive to meet our customers' needs every day. Discretion and Confidentiality are our top priority. We protect the privacy and confidentiality of our clients.",
+
+  "fortalezas_titulo": "OUR STRENGTHS",
+
+  "oferta_titulo": "COMPREHENSIVE SERVICE OFFER",
+  "oferta_text": "FINANCE. AGRIBUSINESS. REAL ESTATE INVESTMENTS. BUSINESS CONSULTING. Broad and comprehensive range of services. A multidisciplinary team of highly qualified companies and professionals for each topic to be addressed. Service Quality Proposal and Know-How from our professional team. Strict regulatory standards across segments.",
+
+  "evitar_titulo": "AVOID CONFLICTS OF INTEREST",
+  "evitar_text": "Avoiding conflicts of interest in our relationships with our clients (in structure, price, commission, product) is our philosophy and a central part of our management.",
+
+  "discrecion_titulo": "DISCRETION AND CONFIDENTIALITY",
+  "discrecion_text": "We apply a relationship methodology based on discretion and confidentiality, based on building a long-term relationship.",
+
+  "personalizado_titulo": "PERSONALIZED SERVICE",
+  "personalizado_text": "We listen attentively to identify our clients' needs, define their profile, and provide tailored solutions, fostering long-lasting relationships.",
+
+  "trasparencia_titulo": "TRANSPARENCY",
+  "trasparencia_text": "Transparency is a pillar and a means of expression within our mission to build mutual trust.",
+
+  "independencia_titulo": "INDEPENDENCE",
+  "independencia_text": "The independence to be critical and to be able to freely select the best alternatives, without pressure from shareholders or economic groups, or obligations from an entity, person, operator, administrator, financier, policyholder, product developer or even the client, will give you absolute confidence that our advice will be impartial, critical and focused on your interests. We love what we do. Through partnerships, we are fully involved in the ongoing development of our business. In any specific matter, we stand by the client, independently seeking the most beneficial alternative. ",
+
+  "flexibilidad_titulo": "FLEXIBILITY AND ADAPTATION",
+  "flexibilidad_text": "Develop in changing and dynamic environments, know how to analyze them, and try to adapt flexibly to them.",
+
+  "contacto_titulo": "CONTACT US",
+  "contacto_pregunta": "ANY QUESTIONS OR CONCERNS?",
+  "contacto_llamanos": "CALL US",
+
+  "form_nombre": "Name and Surname",
+  "form_email": "Email",
+  "form_telefono": "Phone",
+  "form_consulta": "Inquiry...",
+
+  "consultar": "CONSULT"
 }

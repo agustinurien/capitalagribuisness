@@ -49,24 +49,14 @@ const items = [
     description: translations.agro_asesoramiento_text,
   },
   {
-    title: translations.agro_financiaciones_titulo,
-    icon: download1,
-    description: translations.agro_financiaciones_text,
-  },
-  {
-    title: translations.agro_servicios_titulo,
-    icon: download2,
-    description: translations.agro_servicios_text,
-  },
-  {
-    title: translations.agro_banca_titulo,
-    icon: download3,
-    description: translations.agro_banca_text,
-  },
-  {
     title: translations.agro_inversiones_titulo,
     icon: download4,
     description: "",
+  },
+  {
+    title: translations.agro_financiaciones_titulo,
+    icon: download1,
+    description: translations.agro_financiaciones_text,
   },
   {
     title: translations.agro_granos_titulo,
@@ -74,14 +64,24 @@ const items = [
     description: translations.agro_granos_text,
   },
   {
-    title: translations.agro_estructuras_titulo,
-    icon: download6,
-    description: translations.agro_estructuras_text,
+    title: translations.agro_servicios_titulo,
+    icon: download2,
+    description: translations.agro_servicios_text,
   },
   {
     title: translations.agro_coaching_titulo,
     icon: download7,
     description: translations.agro_coaching_text,
+  },
+  {
+    title: translations.agro_estructuras_titulo,
+    icon: download6,
+    description: translations.agro_estructuras_text,
+  },
+  {
+    title: translations.agro_banca_titulo,
+    icon: download3,
+    description: translations.agro_banca_text,
   },
 ];
 ---
@@ -95,7 +95,7 @@ const items = [
     <div class="servicio">
       <div class="icon"><FaLeaf /></div>
       <div class="servicioText">
-        <h2>NUESTROS SERVICIOS <br /> EN AGRONEGOCIOS</h2>
+        <h2>{translations.agro_titulo}</h2>
       </div>
     </div>
 
@@ -278,7 +278,7 @@ const items = [
       width: 85%;
       font-family: "NotoSansRegular", sans-serif;
       font-weight: 400;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     @media screen and (max-width: 1052px) {
       .videoContainer {

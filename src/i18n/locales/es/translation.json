@@ -19,7 +19,7 @@
   "finanzas_asesoramiento_titulo": "ASESORAMIENTO EN MERCADOS FINANCIEROS",
   "finanzas_asesoramiento_text": "Asesoramiento sobre el Mercado Financiero Local y Global. Asesoramiento de Inversiones TACTICO & ESTRATEGICO. Administración de Portafolios de Inversión. Análisis de Fondos de Inversión, tanto Mutuos como de Inversiones Alternativas. Administración de Fondos de Inversión.",
   "finanzas_financiaciones_titulo": "FINANCIACIONES",
-  "finanzas_financiaciones_text": "Obtención de financiamiento a través del ecosistema del mercado de capitales:  Cauciones bursátiles. Cheques de pago diferido (avalados por SGR o bancarios), garantizados y no garantizados. Pagarés bursátiles. Facturas de crédito electrónica..",
+  "finanzas_financiaciones_text": "Obtención de financiamiento a través del ecosistema del mercado de capitales.  Cauciones bursátiles. Cheques de pago diferido (avalados por SGR o bancarios), garantizados y no garantizados. Pagarés bursátiles. Facturas de crédito electrónica..",
   "finanzas_servicios_titulo": "SERVICIOS TRANSACCIONALES Y CASH MANAGEMENT",
   "finanzas_servicios_text": "Asesoramiento para operar en el ecosistema financiero, bancario y de inversiones. Asesoramiento y administración de liquidez y flujos monetarios.",
   "finanzas_banca_titulo": "BANCA DE INVERSIÓN / INVESTMENT BANKING",
@@ -39,7 +39,7 @@
   "agro_asesoramiento_text": "En un mercado volátil y de alto riesgo, con una participación creciente de actores dentro y fuera del sector, brindamos asesoramiento estratégico para que usted decida cuándo, cómo y dónde comprar o vender.",
 
   "agro_financiaciones_titulo": "ESTRATEGIAS DE COBERTURA DE PRECIOS DE GRANOS",
-  "agro_financiaciones_text": "Obtención de financiamiento a través del ecosistema del mercado de capitales: Cauciones bursátiles. Cheques de pago diferido (avalados por SGR o bancarios), garantizados y no garantizados. Pagarés bursátiles. Facturas de crédito electrónica.",
+  "agro_financiaciones_text": "Análisis y Elaboración de Estrategias para proteger los Precios Finales de Venta en los Granos.",
 
   "agro_servicios_titulo": "FINANCIACIONES & COLOCACIONES",
   "agro_servicios_text": "Alternativas de Financiación y Colocación para el sector de Agronegocios.",
@@ -56,5 +56,53 @@
   "agro_estructuras_text": "Herramienta financiera innovadora diseñada para facilitar el acceso al crédito mediante garantías y reducción de costos. Es un título de crédito digital que certifica la posesión de una determinada cantidad y calidad de productos agropecuarios almacenados en un depósito autorizado. Funciona como un recibo que garantiza la existencia y propiedad de esos bienes.",
 
   "agro_coaching_titulo": "INVERSIONES EN AGRONEGOCIOS",
-  "agro_coaching_text": "Ofrecemos oportunidades de inversión en el sector agropecuario, orientadas a generar rentabilidad a través del desarrollo, producción y comercialización de productos del agro. Diseñamos estrategias a medida para maximizar el valor de cada proyecto, combinando innovación, gestión de riesgos y conocimiento del mercado."
+  "agro_coaching_text": "Ofrecemos oportunidades de inversión en el sector agropecuario, orientadas a generar rentabilidad a través del desarrollo, producción y comercialización de productos del agro. Diseñamos estrategias a medida para maximizar el valor de cada proyecto, combinando innovación, gestión de riesgos y conocimiento del mercado.",
+
+  "nosotros_titulo": "SOBRE NOSOTROS",
+  "nosotros_expertise_text": "Somos una red de profesionales con un sólido background y enfoque analítico, que abarca diversas disciplinas como Administración de Empresas, Economía, Finanzas, Investigación, Agronegocios, Mercado Inmobiliario y Comercio Exterior. Contamos con una visión integral y holística, y una alta capacidad de análisis que nos permite comprender cada situación particular dentro de un marco general amplio y diverso. Brindamos asesoramiento a empresas e individuos, construyendo relaciones estables, duraderas y basadas en la confianza y la serenidad.",
+
+  "nosotros_experiencia_titulo": "EXPERIENCIA",
+  "nosotros_experiencia_text": "Contamos con 30 años de experiencia en el rubro de Finanzas y Agronegocios. Esta trayectoria nos permite adaptarnos con flexibilidad a los cambios del mundo actual, con una visión global, un espíritu innovador y una actitud emprendedora.",
+
+  "valores_titulo": "VISIÓN & VALORES",
+
+  "vision_titulo": "NUESTRA VISIÓN",
+  "vision_text": "Generamos relaciones humanas estrechas y de largo plazo con nuestros clientes, basadas en la confianza, la integridad ética, la transparencia, la confidencialidad, el servicio y altos estándares profesionales, en todas las áreas vinculadas a Finanzas, Agronegocios, Inversiones Inmobiliarias y Coaching Empresarial.",
+
+  "valores2_titulo": "NUESTROS VALORES",
+  "valores2_text": "Confianza y servicio: Nos comprometemos a construir relaciones basadas en la confianza, ofreciendo un servicio de excelencia. Tecnicismo y profesionalismo: Nos sentimos orgullosos de la calidad técnica y profesional de nuestro trabajo. Compromiso personal y ético: La integridad y la honestidad son el corazón de nuestro negocio. Intereses del cliente primero: Los intereses de nuestros clientes siempre son nuestra prioridad. Nuestros activos más valiosos son nuestra gente y nuestra reputación. Pasión por lo que hacemos: Ponemos pasión en cada proyecto y nos esforzamos diariamente por anticipar y abarcar las necesidades de nuestros clientes. Discreción y confidencialidad: La protección de la privacidad y la confidencialidad de nuestros clientes es nuestra mayor prioridad.",
+
+  "fortalezas_titulo": "NUESTRAS FORTALEZAS",
+
+  "oferta_titulo": "OFERTA INTEGRAL DE SERVICIOS",
+  "oferta_text": "Finanzas. Agronegocios. Inversiones inmobiliarias. Consultoría empresarial. Ofrecemos una propuesta amplia e integral de servicios, respaldada por un equipo multidisciplinario de empresas y profesionales de altísimo nivel en cada área de especialización. Nuestro enfoque se basa en brindar calidad de servicio, know-how técnico y experiencia profesional, cumpliendo con estrictos estándares de regulación en cada segmento.",
+
+  "evitar_titulo": "EVITAR CONFLICTOS DE INTERÉS",
+  "evitar_text": "Evitar conflictos de interés en la relación con nuestros clientes —ya sea en estructuras, precios, comisiones o productos— es parte central de nuestra filosofía y de nuestra gestión.",
+
+  "discrecion_titulo": "DISCRECIÓN Y CONFIDENCIALIDAD",
+  "discrecion_text": "Aplicamos una metodología de trabajo basada en la discreción y la confidencialidad, con el objetivo de construir relaciones sólidas y de largo plazo.",
+
+  "personalizado_titulo": "SERVICIO PERSONALIZADO",
+  "personalizado_text": "Nos enfocamos en la escucha activa para detectar las necesidades de nuestros clientes, definir su perfil y brindar soluciones a medida, fomentando relaciones duraderas.",
+
+  "trasparencia_titulo": "TRANSPARENCIA",
+  "trasparencia_text": "La transparencia es un pilar fundamental y la base de nuestra misión, clave para construir relaciones de confianza mutua.",
+
+  "independencia_titulo": "INDEPENDENCIA",
+  "independencia_text": "Nuestra independencia nos permite ser críticos y seleccionar libremente las mejores alternativas, sin presiones de accionistas, grupos económicos ni obligaciones con entidades, personas, operadores, administradores, financiadores, tomadores, desarrolladores de productos o incluso del propio cliente. Esto garantiza que nuestro asesoramiento sea siempre imparcial, crítico y enfocado en sus intereses. Nos apasiona lo que hacemos. Como socios involucrados en el desarrollo permanente de nuestro negocio, trabajamos a través de partnerships estratégicos. En cada tema específico, estamos del lado del cliente, buscando de manera independiente la alternativa más beneficiosa para su situación.",
+
+  "flexibilidad_titulo": "FLEXIBILIDAD Y ADAPTACIÓN",
+  "flexibilidad_text": "Nos desarrollamos en entornos cambiantes y dinámicos, con la capacidad de analizarlos y adaptarnos con flexibilidad a cada situación.",
+
+  "contacto_titulo": "CONTACTO",
+  "contacto_pregunta": "¿ALGUNA PREGUNTA O INQUIETUD?",
+  "contacto_llamanos": "CONSULTANOS",
+
+  "form_nombre": "Nombre y Apellido",
+  "form_email": "Correo Electrónico",
+  "form_telefono": "Teléfono",
+  "form_consulta": "Consulta...",
+
+  "consultar": "CONSULTAR"
 }

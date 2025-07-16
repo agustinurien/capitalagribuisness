@@ -23,6 +23,8 @@ import video2 from "/videos/02.mp4";
 import video3 from "/videos/03.mp4";
 import video4 from "/videos/04.mp4";
 import video5 from "/videos/05.mp4";
+import video6 from "/videos/CoberturaRiesgos.mp4";
+import video7 from "/videos/gestionRiesgo.mp4";
 
 const videoList = [
   {
@@ -40,6 +42,12 @@ const videoList = [
   {
     src: video5,
   },
+  {
+    src: video6,
+  },
+  {
+    src: video7,
+  },
 ];
 const { lang } = Astro.params;
 const translations = await import(
@@ -53,24 +61,9 @@ const items = [
     description: translations.finanzas_asesoramiento_text,
   },
   {
-    title: translations.finanzas_financiaciones_titulo,
-    icon: icon2,
-    description: translations.finanzas_financiaciones_text,
-  },
-  {
     title: translations.finanzas_servicios_titulo,
     icon: icon3,
     description: translations.finanzas_servicios_text,
-  },
-  {
-    title: translations.finanzas_banca_titulo,
-    icon: icon4,
-    description: translations.finanzas_banca_text,
-  },
-  {
-    title: translations.finanzas_inversiones_titulo,
-    icon: icon5,
-    description: translations.finanzas_inversiones_text,
   },
   {
     title: translations.finanzas_productos_titulo,
@@ -78,9 +71,24 @@ const items = [
     description: translations.finanzas_productos_text,
   },
   {
+    title: translations.finanzas_financiaciones_titulo,
+    icon: icon2,
+    description: translations.finanzas_financiaciones_text,
+  },
+  {
+    title: translations.finanzas_banca_titulo,
+    icon: icon4,
+    description: translations.finanzas_banca_text,
+  },
+  {
     title: translations.finanzas_estructuras_titulo,
     icon: icon7,
     description: translations.finanzas_estructuras_text,
+  },
+  {
+    title: translations.finanzas_inversiones_titulo,
+    icon: icon5,
+    description: translations.finanzas_inversiones_text,
   },
   {
     title: translations.finanzas_coaching_titulo,

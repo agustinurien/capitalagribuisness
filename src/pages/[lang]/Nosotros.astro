@@ -25,49 +25,45 @@ export async function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
+const translations = await import(
+  `../../i18n/locales/${lang}/translation.json`
+);
 
 const items = [
   {
-    title: "OFERTA INTEGRAL DE SERVICIOS",
+    title: translations.oferta_titulo,
     icon: icon1,
-    description:
-      "Finanzas. Agronegocios. Inversiones inmobiliarias. Consultoría empresarial. Ofrecemos una propuesta amplia e integral de servicios, respaldada por un equipo multidisciplinario de empresas y profesionales de altísimo nivel en cada área de especialización. Nuestro enfoque se basa en brindar calidad de servicio, know-how técnico y experiencia profesional, cumpliendo con estrictos estándares de regulación en cada segmento.",
+    description: translations.oferta_text,
   },
   {
-    title: "EVITAR CONFLICTOS DE INTERÉS",
-    icon: icon2,
-    description:
-      "Evitar conflictos de interés en la relación con nuestros clientes —ya sea en estructuras, precios, comisiones o productos— es parte central de nuestra filosofía y de nuestra gestión.",
-  },
-  {
-    title: "DISCRECIÓN Y CONFIDENCIALIDAD",
-    icon: icon3,
-    description:
-      "Aplicamos una metodología de trabajo basada en la discreción y la confidencialidad, con el objetivo de construir relaciones sólidas y de largo plazo.",
-  },
-  {
-    title: "SERVICIO PERSONALIZADO",
+    title: translations.personalizado_titulo,
     icon: icon4,
-    description:
-      "Nos enfocamos en la escucha activa para detectar las necesidades de nuestros clientes, definir su perfil y brindar soluciones a medida, fomentando relaciones duraderas.",
+    description: translations.personalizado_text,
   },
   {
-    title: "TRANSPARENCIA",
+    title: translations.evitar_titulo,
+    icon: icon2,
+    description: translations.evitar_text,
+  },
+  {
+    title: translations.trasparencia_titulo,
     icon: icon5,
-    description:
-      "La transparencia es un pilar fundamental y la base de nuestra misión, clave para construir relaciones de confianza mutua.",
+    description: translations.trasparencia_text,
   },
   {
-    title: "INDEPENDENCIA",
+    title: translations.independencia_titulo,
     icon: icon6,
-    description:
-      "Nuestra independencia nos permite ser críticos y seleccionar libremente las mejores alternativas, sin presiones de accionistas, grupos económicos ni obligaciones con entidades, personas, operadores, administradores, financiadores, tomadores, desarrolladores de productos o incluso del propio cliente. Esto garantiza que nuestro asesoramiento sea siempre imparcial, crítico y enfocado en sus intereses. Nos apasiona lo que hacemos. Como socios involucrados en el desarrollo permanente de nuestro negocio, trabajamos a través de partnerships estratégicos. En cada tema específico, estamos del lado del cliente, buscando de manera independiente la alternativa más beneficiosa para su situación.",
+    description: translations.independencia_text,
   },
   {
-    title: "FLEXIBILIDAD Y ADAPTACIÓN",
+    title: translations.discrecion_titulo,
+    icon: icon3,
+    description: translations.discrecion_text,
+  },
+  {
+    title: translations.flexibilidad_titulo,
     icon: icon7,
-    description:
-      "Nos desarrollamos en entornos cambiantes y dinámicos, con la capacidad de analizarlos y adaptarnos con flexibilidad a cada situación.",
+    description: translations.flexibilidad_text,
   },
 ];
 ---
@@ -78,7 +74,7 @@ const items = [
       <Image src={group} alt="logo" width={1000} class="iconNosotros" />
     </div>
     <div class="servicioText">
-      <h2>SOBRE NOSOTROS</h2>
+      <h2>{translations.nosotros_titulo}</h2>
     </div>
   </div>
 
@@ -91,26 +87,7 @@ const items = [
             <li>
               <FaRegCheckCircle />
               <p>
-                Somos una red de profesionales con un sólido background y
-                enfoque analítico, que abarca diversas disciplinas como
-                Administración de Empresas, Economía, Finanzas, Investigación,
-                Agronegocios, Mercado Inmobiliario y Comercio Exterior.
-              </p>
-            </li>
-            <li>
-              <FaRegCheckCircle />
-              <p>
-                Contamos con una visión integral y holística, y una alta
-                capacidad de análisis que nos permite comprender cada situación
-                particular dentro de un marco general amplio y diverso.
-              </p>
-            </li>
-            <li>
-              <FaRegCheckCircle />
-              <p>
-                Brindamos asesoramiento a empresas e individuos, construyendo
-                relaciones estables, duraderas y basadas en la confianza y la
-                serenidad.
+                {translations.nosotros_expertise_text}
               </p>
             </li>
           </ul>
@@ -136,15 +113,12 @@ const items = [
         />
       </div>
       <div class="experienciaText">
-        <h3>EXPERIENCIA</h3>
+        <h3>{translations.nosotros_experiencia_titulo}</h3>
         <ul>
           <li>
             <FaRegCheckCircle />
             <p>
-              Contamos con 30 años de experiencia en el rubro de Finanzas y
-              Agronegocios. Esta trayectoria nos permite adaptarnos con
-              flexibilidad a los cambios del mundo actual, con una visión
-              global, un espíritu innovador y una actitud emprendedora.
+              {translations.nosotros_experiencia_text}
             </p>
           </li>
         </ul>
@@ -157,7 +131,7 @@ const items = [
       <Image src={vision} alt="logo" width={1000} class="iconNosotros" />
     </div>
     <div class="servicioText">
-      <h2>VISIÓN & VALORES</h2>
+      <h2>{translations.valores_titulo}</h2>
     </div>
   </div>
 
@@ -165,17 +139,12 @@ const items = [
     <div class="visionContainer">
       <div class="visionContent">
         <div class="visionText">
-          <h3>NUESTRA VISIÓN</h3>
+          <h3>{translations.vision_titulo}</h3>
           <ul>
             <li>
               <FaRegCheckCircle />
               <p>
-                Generamos relaciones humanas estrechas y de largo plazo con
-                nuestros clientes, basadas en la confianza, la integridad ética,
-                la transparencia, la confidencialidad, el servicio y altos
-                estándares profesionales, en todas las áreas vinculadas a
-                Finanzas, Agronegocios, Inversiones Inmobiliarias y Coaching
-                Empresarial.
+                {translations.vision_text}
               </p>
             </li>
           </ul>
@@ -191,50 +160,12 @@ const items = [
         <Image src={valores} alt="logo" width={1000} class="iconValores" />
       </div>
       <div class="valoresText">
-        <h3>NUESTROS VALORES</h3>
+        <h3>{translations.valores2_titulo}</h3>
         <ul>
           <li>
             <FaRegCheckCircle />
             <p>
-              Confianza y servicio: Nos comprometemos a construir relaciones
-              basadas en la confianza, ofreciendo un servicio de excelencia.
-            </p>
-          </li>
-          <li>
-            <FaRegCheckCircle />
-            <p>
-              Tecnicismo y profesionalismo: Nos sentimos orgullosos de la
-              calidad técnica y profesional de nuestro trabajo.
-            </p>
-          </li>
-          <li>
-            <FaRegCheckCircle />
-            <p>
-              Compromiso personal y ético: La integridad y la honestidad son el
-              corazón de nuestro negocio.
-            </p>
-          </li>
-          <li>
-            <FaRegCheckCircle />
-            <p>
-              Intereses del cliente primero: Los intereses de nuestros clientes
-              siempre son nuestra prioridad. Nuestros activos más valiosos son
-              nuestra gente y nuestra reputación.
-            </p>
-          </li>
-          <li>
-            <FaRegCheckCircle />
-            <p>
-              Pasión por lo que hacemos: Ponemos pasión en cada proyecto y nos
-              esforzamos diariamente por anticipar y abarcar las necesidades de
-              nuestros clientes.
-            </p>
-          </li>
-          <li>
-            <FaRegCheckCircle />
-            <p>
-              Discreción y confidencialidad: La protección de la privacidad y la
-              confidencialidad de nuestros clientes es nuestra mayor prioridad.
+              {translations.valores2_text}
             </p>
           </li>
         </ul>
@@ -247,37 +178,44 @@ const items = [
       <Image src={fortaleza} alt="logo" width={1000} class="iconNosotros" />
     </div>
     <div class="servicioText">
-      <h2>NUESTRAS FORTALEZAS</h2>
+      <h2>{translations.fortalezas_titulo}</h2>
     </div>
   </div>
-  <div class="itemsContainer">
-    {
-      items.map((item) => (
-        <div class="item">
-          <div class="iconContainer">
-            <div class="iconItem">
-              <Image src={item.icon} alt="logo" width={1000} class="logoItem" />
+  <section class="itemsWrapper">
+    <div class="itemsContainer">
+      {
+        items.map((item) => (
+          <div class="item">
+            <div class="iconContainer">
+              <div class="iconItem">
+                <Image
+                  src={item.icon}
+                  alt="logo"
+                  width={1000}
+                  class="logoItem"
+                />
+              </div>
+            </div>
+            <div class="textItem">
+              <h2>{item.title}</h2>
+              <ul>
+                {item.description
+                  .split(".")
+                  .filter((p) => p.trim() !== "")
+                  .map((p) => (
+                    <li>
+                      {" "}
+                      <FaRegCheckCircle />
+                      <p>{p.trim()}.</p>
+                    </li>
+                  ))}
+              </ul>
             </div>
           </div>
-          <div class="textItem">
-            <h2>{item.title}</h2>
-            <ul>
-              {item.description
-                .split(".")
-                .filter((p) => p.trim() !== "")
-                .map((p) => (
-                  <li>
-                    {" "}
-                    <FaRegCheckCircle />
-                    <p>{p.trim()}.</p>
-                  </li>
-                ))}
-            </ul>
-          </div>
-        </div>
-      ))
-    }
-  </div>
+        ))
+      }
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -294,7 +232,7 @@ const items = [
     padding-right: 250px;
     background-image:
       linear-gradient(to right, rgba(0, 0, 0, 0.989) 25%, rgba(0, 0, 0, 0)),
-      url(../assets/work.jpg);
+      url(../../assets/work.jpg);
   }
   .visionValores {
     border-top: 4px solid white;
@@ -310,7 +248,7 @@ const items = [
     padding-right: 250px;
     background-image:
       linear-gradient(to right, rgba(0, 0, 0, 0.989) 25%, rgba(0, 0, 0, 0)),
-      url(../assets/sticky.jpg);
+      url(../../assets/sticky.jpg);
   }
   .fortaleza {
     border-top: 4px solid white;
@@ -325,7 +263,7 @@ const items = [
     padding-right: 250px;
     background-image:
       linear-gradient(to right, rgba(0, 0, 0, 0.989) 25%, rgba(0, 0, 0, 0)),
-      url(../assets/fort.png);
+      url(../../assets/fort.png);
   }
   .icon {
     padding-right: 70px;
@@ -597,16 +535,12 @@ const items = [
     height: 100%;
     object-fit: contain;
   }
-  .itemsContainer {
+  .itemsWrapper {
     border-top: 4px solid white;
-    padding: 120px 0px;
-    gap: 20px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
     background:
       radial-gradient(at top left, #010101, transparent 45%),
       radial-gradient(at bottom right, #010101, transparent 35%), #404041;
@@ -614,17 +548,29 @@ const items = [
     background-size: 100% 100%;
     box-sizing: border-box;
   }
+  .itemsContainer {
+    padding: 120px 0px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: fit-content;
+    height: 200vh;
+  }
   .item {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 500px;
-    height: 650px;
+    height: fit-content;
     background-color: rgb(255, 255, 255);
     border: 2px solid black;
     border-radius: 20px;
     box-sizing: border-box;
+    padding: 20px 0px;
   }
   .iconContainer {
     width: 160px;

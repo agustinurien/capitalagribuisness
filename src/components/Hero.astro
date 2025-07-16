@@ -57,10 +57,12 @@ const translations = await import(`../i18n/locales/${lang}/translation.json`);
     <h3>{translations.hero_subtitulo}</h3>
     <h2 class="and">&</h2>
     <div class="finanzas">
-      <a href="/finanzas/Finanzas">{translations.hero_finanza}</a>
+      <a href={`/${lang}/finanzas/Finanzas`}>{translations.navbar_inicio}</a>
     </div>
     <div class="agronegocios">
-      <a href="/agronegocios/Agronegocios">{translations.hero_agronegocios}</a>
+      <a href={`/${lang}/agronegocios/Agronegocios`}
+        >{translations.hero_agronegocios}</a
+      >
     </div>
   </div>
 

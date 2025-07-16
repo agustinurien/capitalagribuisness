@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import emailjs, { send } from "emailjs-com";
 import "../components/contact.css";
 
-const Contact = () => {
+const Contact = ({ lang }) => {
+  const [translations, setTranslations] = useState(null);
+
   const handlesubmit = (e) => {
     e.preventDefault();
 
@@ -32,41 +34,61 @@ const Contact = () => {
 
     form.reset();
   };
+
+  useEffect(() => {
+    const loadTranslations = async () => {
+      try {
+        const translationModule = await import(
+          `../i18n/locales/${lang}/translation.json`
+        );
+        setTranslations(translationModule.default);
+      } catch (error) {
+        console.error("Error loading translations:", error);
+      }
+    };
+
+    loadTranslations();
+  }, [lang]);
+
+  if (!translations) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="formContainer">
-      <h3>¿ALGUNA PREGUNTA O INQUIETUD?</h3>
-      <h2>CONSULTANOS</h2>
+      <h3>{translations.contacto_pregunta}</h3>
+      <h2>{translations.contacto_llamanos}</h2>
       <div className="form">
         <form onSubmit={handlesubmit}>
           <input
             type="text"
             id="name"
             name="name"
-            placeholder="Nombre y Apellido"
+            placeholder={translations.form_nombre}
             required
           />
           <input
             type="email"
             id="email"
             name="email"
-            placeholder="Email"
+            placeholder={translations.form_email}
             required
           />
           <input
             type="number"
             id="number"
             name="number"
-            placeholder="Teléfono"
+            placeholder={translations.form_telefono}
             required
           />
           <textarea
             id="message"
             name="message"
-            placeholder="Consulta..."
+            placeholder={translations.form_consulta}
             required
           ></textarea>
 
-          <button>CONSULTAR</button>
+          <button>{translations.consultar}</button>
         </form>
       </div>
     </div>

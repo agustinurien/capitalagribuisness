@@ -33,7 +33,7 @@ const Idioma = () => {
 
   return (
     <select onChange={handleLanguageChange} value={selectedLang}>
-      <option value="es">🇪🇸 Español</option>
+      <option value="es">🇦🇷 Español</option>
       <option value="en">🇺🇸 English</option>
     </select>
   );
