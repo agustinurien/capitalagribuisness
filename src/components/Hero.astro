@@ -55,6 +55,7 @@ const translations = await import(`../i18n/locales/${lang}/translation.json`);
 
   <div class="asesoramientosContainer">
     <h3>{translations.hero_subtitulo}</h3>
+    <h4>{translations.hero_slogan}</h4>
     <h2 class="and">&</h2>
     <div class="finanzas">
       <a href={`/${lang}/finanzas/Finanzas`}>{translations.navbar_inicio}</a>
@@ -141,6 +142,27 @@ const translations = await import(`../i18n/locales/${lang}/translation.json`);
     align-items: center;
     width: 100%;
     height: 320px;
+  }
+  .asesoramientosContainer h4 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 3%);
+    font-size: 1.1rem;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+
+    height: 105%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    pointer-events: none;
+
+    font-family: "NotoSansRegular", sans-serif;
+    font-weight: 400;
   }
   .asesoramientosContainer h3 {
     position: absolute;
@@ -283,6 +305,9 @@ const translations = await import(`../i18n/locales/${lang}/translation.json`);
     .asesoramientosContainer h3 {
       font-size: 1rem;
     }
+    .asesoramientosContainer h4 {
+      font-size: 1rem;
+    }
     .and {
       font-size: 3rem;
     }
@@ -323,6 +348,9 @@ const translations = await import(`../i18n/locales/${lang}/translation.json`);
       height: 180px;
     }
     .asesoramientosContainer h3 {
+      font-size: 0.6rem;
+    }
+    .asesoramientosContainer h4 {
       font-size: 0.6rem;
     }
     .bienvenido {
