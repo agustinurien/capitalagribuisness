@@ -15,7 +15,7 @@ const Contact = ({ lang }) => {
       user_number: form.number.value,
       user_email: form.email.value,
       message: form.message.value,
-      to_email: "agus.urien3@gmail.com",
+      to_email: "advisory@capitalagribusiness.com",
       reply_to: form.email.value,
     };
 
