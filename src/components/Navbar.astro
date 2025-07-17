@@ -38,9 +38,7 @@ const translations = await import(`../i18n/locales/${lang}/translation.json`);
         <li>
           <a href={`/${lang}/Nosotros`}>{translations.navbar_nosotros}</a>
         </li>
-        <li>
-          <a href={`/${lang}/Noticias`}>{translations.navbar_noticias}</a>
-        </li>
+
         <li><a href={`/${lang}/Contact`}>{translations.navbar_contacto}</a></li>
         <Idioma client:load />
       </ul>
