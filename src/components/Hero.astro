@@ -54,8 +54,8 @@ const translations = await import(`../i18n/locales/${lang}/translation.json`);
   </div>
 
   <div class="asesoramientosContainer">
-    <h3>{translations.hero_subtitulo}</h3>
-    <h4>{translations.hero_slogan}</h4>
+    <h3>{translations.hero_subtitulo} | {translations.hero_slogan}</h3>
+
     <h2 class="and">&</h2>
     <div class="finanzas">
       <a href={`/${lang}/finanzas/Finanzas`}>{translations.navbar_inicio}</a>

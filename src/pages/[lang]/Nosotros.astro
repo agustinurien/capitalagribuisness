@@ -351,7 +351,7 @@ const items = [
   .expertiseText li p {
     width: 90%;
     margin: 0px;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .expertiseImage {
@@ -406,7 +406,7 @@ const items = [
   .experienciaText li p {
     width: 90%;
     margin: 0px;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   .experienciaImage {
     width: 50%;
@@ -477,7 +477,7 @@ const items = [
   .vision li p {
     width: 90%;
     margin: 0px;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   .visionImage {
     width: 50%;
@@ -560,7 +560,7 @@ const items = [
     align-items: center;
     flex-wrap: wrap;
     width: fit-content;
-    height: 200vh;
+    height: 220vh;
   }
   .item {
     display: flex;
@@ -630,7 +630,11 @@ const items = [
     width: 85%;
     font-size: 1.1rem;
   }
-
+  @media screen and (max-width: 1250px) {
+    .itemsContainer {
+      height: fit-content;
+    }
+  }
   @media screen and (max-width: 768px) {
     .expertiseContainer {
       width: 90%;
