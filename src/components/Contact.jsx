@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import emailjs, { send } from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import "../components/contact.css";
 
 const Contact = ({ lang }) => {
