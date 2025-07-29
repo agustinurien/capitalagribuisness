@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../../i18n";
+import "./idioma.css";
+import arg from "../../assets/argentina.png";
+import usa from "../../assets/usa.png";
 
 const Idioma = () => {
   const { i18n } = useTranslation();
@@ -32,10 +35,22 @@ const Idioma = () => {
   };
 
   return (
-    <select onChange={handleLanguageChange} value={selectedLang}>
-      <option value="es">🇦🇷 Español</option>
-      <option value="en">🇺🇸 English</option>
-    </select>
+    <div className="idiomaContainer">
+      <div className="idioma">
+        {
+          selectedLang === "en" ? <img src={usa.src} alt="" /> : <img src={arg.src} alt="" />
+        }
+
+      </div>
+      <select onChange={handleLanguageChange} value={selectedLang}>
+        <option value="es">
+          Español
+        </option>
+        <option value="en">
+          English
+        </option>
+      </select>
+    </div>
   );
 };
 

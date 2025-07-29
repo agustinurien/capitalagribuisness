@@ -53,7 +53,7 @@ const translations = await import(`../i18n/locales/${lang}/translation.json`);
       </ul>
     </div>
     <div class="navbarHamburguesa">
-      <NavbarHamburguesa client:load />
+      <NavbarHamburguesa lang={lang} client:load  />
     </div>
   </nav>
 </div>
@@ -68,6 +68,7 @@ const translations = await import(`../i18n/locales/${lang}/translation.json`);
     width: 300px;
     height: 100%;
     padding: 0px 20px;
+    
   }
   .logoNavContainer a {
     display: flex;

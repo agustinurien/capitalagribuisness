@@ -35,7 +35,14 @@ const Contact = ({ lang }) => {
     form.reset();
   };
 
+  const supportedLangs = ['es', 'en'];
+
   useEffect(() => {
+    if (!supportedLangs.includes(lang)) {
+      console.warn("Idioma no soportado:", lang);
+      return;
+    }
+
     const loadTranslations = async () => {
       try {
         const translationModule = await import(

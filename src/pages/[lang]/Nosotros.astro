@@ -83,14 +83,17 @@ const items = [
       <h3>EXPERTISE</h3>
       <div class="expertiseContent">
         <div class="expertiseText">
-          <ul>
-            <li>
-              <FaRegCheckCircle />
-              <p>
-                {translations.nosotros_expertise_text}
-              </p>
-            </li>
-          </ul>
+           <ul>
+    {translations.nosotros_expertise_text
+      .split('.')
+      .filter(text => text.trim() !== '')
+      .map((text, index) => (
+        <li key={index}>
+          <FaRegCheckCircle />
+          <p>{text.trim()}.</p>
+        </li>
+      ))}
+  </ul>
         </div>
 
         <div class="expertiseImage">
@@ -115,13 +118,16 @@ const items = [
       <div class="experienciaText">
         <h3>{translations.nosotros_experiencia_titulo}</h3>
         <ul>
-          <li>
-            <FaRegCheckCircle />
-            <p>
-              {translations.nosotros_experiencia_text}
-            </p>
-          </li>
-        </ul>
+    {translations.nosotros_experiencia_text
+      .split('.')
+      .filter(text => text.trim() !== '')
+      .map((text, index) => (
+        <li key={index}>
+          <FaRegCheckCircle />
+          <p>{text.trim()}.</p>
+        </li>
+      ))}
+  </ul>
       </div>
     </div>
   </div>
@@ -141,13 +147,16 @@ const items = [
         <div class="visionText">
           <h3>{translations.vision_titulo}</h3>
           <ul>
-            <li>
-              <FaRegCheckCircle />
-              <p>
-                {translations.vision_text}
-              </p>
-            </li>
-          </ul>
+    {translations.vision_text
+      .split('.')
+      .filter(text => text.trim() !== '')
+      .map((text, index) => (
+        <li key={index}>
+          <FaRegCheckCircle />
+          <p>{text.trim()}.</p>
+        </li>
+      ))}
+  </ul>
         </div>
 
         <div class="visionImage">
@@ -162,13 +171,16 @@ const items = [
       <div class="valoresText">
         <h3>{translations.valores2_titulo}</h3>
         <ul>
-          <li>
-            <FaRegCheckCircle />
-            <p>
-              {translations.valores2_text}
-            </p>
-          </li>
-        </ul>
+    {translations.valores2_text
+      .split('.')
+      .filter(text => text.trim() !== '')
+      .map((text, index) => (
+        <li key={index}>
+          <FaRegCheckCircle />
+          <p>{text.trim()}.</p>
+        </li>
+      ))}
+  </ul>
       </div>
     </div>
   </div>
@@ -302,7 +314,7 @@ const items = [
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 750px;
+    height: fit-content;
     padding-bottom: 70px;
     padding-top: 70px;
   }
@@ -413,8 +425,8 @@ const items = [
     height: 100%;
   }
   .experienciaImage .iconExperiencia {
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 50%;
     object-fit: contain;
   }
 
@@ -428,7 +440,7 @@ const items = [
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 750px;
+    height: fit-content;
     padding-bottom: 70px;
     padding-top: 70px;
   }
@@ -482,9 +494,12 @@ const items = [
   .visionImage {
     width: 50%;
     height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .visionImage .iconVision {
-    width: 100%;
+    width: 70%;
     height: 100%;
     object-fit: contain;
   }
@@ -534,7 +549,7 @@ const items = [
     height: 80%;
   }
   .valoresImage .iconValores {
-    width: 100%;
+    width: 75%;
     height: 100%;
     object-fit: contain;
   }
@@ -560,7 +575,7 @@ const items = [
     align-items: center;
     flex-wrap: wrap;
     width: fit-content;
-    height: 220vh;
+    height: 240vh;
   }
   .item {
     display: flex;
@@ -631,6 +646,12 @@ const items = [
     font-size: 1.1rem;
   }
   @media screen and (max-width: 1250px) {
+    .visionContainer{
+      width: 85%;
+    }
+    .expertiseContainer {
+      width: 90%;
+    }
     .itemsContainer {
       height: fit-content;
     }
@@ -653,9 +674,20 @@ const items = [
     li p {
       font-size: 0.9rem;
     }
-
+    .experienciaImage {
+      width: 100%;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .experienciaImage .iconExperiencia {
+      height: 80%;
+    }
     .experiencia {
+      flex-direction: column-reverse;
       width: 90%;
+      padding-top: 50px;
     }
     .experienciaText {
       width: 100%;
@@ -667,7 +699,7 @@ const items = [
       height: fit-content;
     }
     .visionContainer {
-      width: 90%;
+      width:90%;
     }
     .visionContent {
       flex-direction: column;

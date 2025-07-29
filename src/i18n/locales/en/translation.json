@@ -17,33 +17,33 @@
 
   "finanzas_titulo": "OUR SERVICES IN FINANCE",
   "finanzas_subtitulo": "For Individuals, Businesses & Corporations.",
-  "finanzas_asesoramiento_titulo": "FINANCIAL MARKET ADVICE",
-  "finanzas_asesoramiento_text": "Advice on local and global financial markets. Tactical & Strategic Investment Advice. Investment Portfolio Management. Analysis of Investment Funds, both Mutual and Alternative Investments. Investment Fund Management.",
-  "finanzas_financiaciones_titulo": "REAL ESTATE INVESTMENTS",
-  "finanzas_financiaciones_text": "Opportunities in the real estate sector. Purchase, sale, rental, and development of real estate properties with the goal of generating profit through appreciation in property values or rental income. Financial Investment backed by Real Estate Assets.",
-  "finanzas_servicios_titulo": "FINANCING",
-  "finanzas_servicios_text": "Obtaining financing through the capital market ecosystem. (Stock Market Guarantees, Deferred Payment Checks (guaranteed by a Securities Securities Depository or Bank), Guaranteed and Unguaranteed), Stock Market Notes, Electronic Credit Invoices.",
-  "finanzas_banca_titulo": "STRUCTURED INVESTMENT PRODUCTS",
-  "finanzas_banca_text": "Development of financial products that seek to increase profitability and reduce risks, improving and optimizing the risk/benefit ratio.",
-  "finanzas_inversiones_titulo": "TRANSACTIONAL SERVICES AND CASH MANAGEMENT",
-  "finanzas_inversiones_text": "Advice on navigating the financial, banking, and investment ecosystem. Liquidity and Monetary Flow Advice and Management.",
-  "finanzas_productos_titulo": "ALTERNATIVE LEGAL STRUCTURES FOR INVESTMENT AND PLANNING",
-  "finanzas_productos_text": "Trusts. Financial Planning. Succession Planning.",
-  "finanzas_estructuras_titulo": "INVESTMENT BANKING / INVESTMENT BANKING",
-  "finanzas_estructuras_text": "Mergers and Acquisitions (M&A): Advising companies in the process of purchasing, selling, or merging with other companies. Capital raising: Helping companies obtain financing through the issuance of shares, bonds, or other financial instruments. Financial Restructuring: Advising companies in financial difficulty to restructure their debt or capital. Business Valuation: Determining a company's value for various purposes, such as mergers, acquisitions, or IPOs.",
+  "finanzas_asesoramiento_titulo": "FINANCIAL MARKETS ADVICE",
+  "finanzas_asesoramiento_text": "Advice on local and global financial markets. Tactical & Strategic Investment Advice. Portfolio Management. Investment Funds Analysis, both Mutual and Alternative Investments. Investment Funds Management.",
+  "finanzas_financiaciones_titulo": "FINANCING",
+  "finanzas_financiaciones_text": "Obtaining financing through the capital market ecosystem. Stock Market Guarantees. Deferred Payment Checks (guaranteed by a Securities Securities Depository or Bank). Guaranteed and Unguaranteed. Stock Market Notes. Electronic Credit Invoices. Financing through the capital market ecosystem. Stock Market REPOs & Lending. Check Discounting (Guaranteed / Not Guaranteed). Promissory Notes. Electronic Invoices.",
+  "finanzas_inversiones_titulo": "REAL ESTATE INVESTMENTS",
+  "finanzas_inversiones_text": "Opportunities in the real estate sector. Purchase, sale, rental, and development of real estate properties with the goal of generating profit through appreciation in property values or rental income. Financial Investment backed by Real Estate Assets.",
+  "finanzas_productos_titulo": "STRUCTURED PRODCUTS INVESTMENTS",
+  "finanzas_productos_text": "Development of financial products that seek to increase profitability while reducing risks, improving and optimizing the risk/benefit ratio.",
+  "finanzas_servicios_titulo": "TRANSACTIONAL SERVICES AND CASH MANAGEMENT",
+  "finanzas_servicios_text": "Cash Flow Management & Advice.",
+  "finanzas_estructuras_titulo": "LEGAL STRUCTURES FOR INVESTMENT & PLANNING",
+  "finanzas_estructuras_text": "Trusts. Financial Planning. Succession Planning. ",
+  "finanzas_banca_titulo": "INVESTMENT BANKING",
+  "finanzas_banca_text": "Capital raising: Helping companies to obtain financing through the issuance of shares, bonds, or other financial instruments.",
   "finanzas_coaching_titulo": "COACHING / BUSINESS CONSULTING & GENERATIONAL TRANSMISSION",
-  "finanzas_coaching_text": "Through a holistic business view of the complex business system involving Shareholders and their families, Product, Management & Control, Employees, and Advisory Staff.",
+  "finanzas_coaching_text": "Through a holistic business view of the complex business system, involving Shareholders and their families, Products, Management & Control, Employees, and Advisory Staff.",
 
   "agro_titulo": "OUR SERVICES IN AGRIBUSINESS",
 
-  "agro_asesoramiento_titulo": "CONSULTING IN AGRICULTURAL MARKETS",
-  "agro_asesoramiento_text": "In a volatile and high-risk market, with increasing participation from both inside and outside the sector, we provide strategic advice so you can decide when, how, and where to buy or sell.",
+  "agro_asesoramiento_titulo": "ADVISORY IN AGRICULTURAL MARKETS",
+  "agro_asesoramiento_text": "In a volatile and high-risk market, with increasing participants from both inside and outside the sector, we provide strategic advice so you can decide when, how, and where to buy or sell.",
 
-  "agro_financiaciones_titulo": "GRAIN PRICE HEDGING STRATEGIES",
-  "agro_financiaciones_text": "Analysis and Development of Strategies to Protect Final Sales Prices for Grains.",
+  "agro_financiaciones_titulo": "GRAINS PRICE HEDGING STRATEGIES",
+  "agro_financiaciones_text": "Strategies Analysis and Development to Protect Final Sales Prices.",
 
-  "agro_servicios_titulo": "FINANCING & INSURANCE",
-  "agro_servicios_text": "Financing and Placement Alternatives for the Agribusiness Sector.",
+  "agro_servicios_titulo": "FINANCING & CASH MANAGEMENT",
+  "agro_servicios_text": "Financing and Cash Flow Investment Alternatives for the Agribusiness Sector.",
 
   "agro_banca_titulo": "CARBON CREDITS / RENEWABLE ENERGY",
   "agro_banca_text": "Carbon footprint reduction. Certification, development, and registration of carbon credit generation projects. Carbon credit marketing.",
@@ -57,13 +57,13 @@
   "agro_estructuras_text": "An innovative financial tool designed to facilitate access to credit through guarantees and cost reduction. It is a digital credit title that certifies the possession of a certain quantity and quality of agricultural products stored in an authorized warehouse. It functions as a receipt that guarantees the existence and ownership of those goods.",
 
   "agro_coaching_titulo": "INVESTMENTS IN AGRIBUSINESS",
-  "agro_coaching_text": "An innovative financial tool designed to facilitate access to credit through guarantees and cost reduction. It is a digital credit title that certifies the possession of a certain quantity and quality of agricultural products stored in an authorized warehouse. It functions as a receipt that guarantees the existence and ownership of those goods.",
+  "agro_coaching_text": "Investment opportunities in the agricultural sector, aimed at generating profitability through the development, production, and marketing of agricultural products. We design tailored strategies to maximize the value of each project, combining innovation, risk management, and market knowledge.",
 
   "nosotros_titulo": "ABOUT US",
   "nosotros_expertise_text": "We are a network of professionals with a broad and analytical background, covering business administration, economics, finance, research, agribusiness, real estate, and foreign trade. We have a comprehensive and holistic vision, with analytical capacity, to understand a particular situation but always within a broad and diverse general vision and framework. We provide consulting services to businesses and individuals, maintaining stable and long-lasting relationships with our clients, built on deep trust and peace of mind.",
 
   "nosotros_experiencia_titulo": "EXPERIENCE",
-  "nosotros_experiencia_text": "We have 30 years of experience in finance and agribusiness. This allows us to be flexible and adaptable to the changing world. We have a global vision and an innovative and entrepreneurial spirit.",
+  "nosotros_experiencia_text": "30 years of experience in finance and agribusiness. This allows us to be flexible and adaptable to the changing world. We have a global vision and an innovative and entrepreneurial spirit.",
 
   "valores_titulo": "VISION & VALUES",
 
@@ -71,30 +71,30 @@
   "vision_text": "To build close, long-term relationships with our clients, within a framework of trust, ethical integrity, transparency, confidentiality, service, and high professional standards, in all matters related to finance, agribusiness, real estate investments, and business coaching.",
 
   "valores2_titulo": "OUR VALUES",
-  "valores2_text": "Trust and Service. Technicality and Professionalism. We pride ourselves on the professional quality of our work. Personal and ethical commitment. Integrity and honesty are at the heart of our business. Our clients' interests always come first. Our assets are our people and our reputation. We put passion into everything we do. We strive to meet our customers' needs every day. Discretion and Confidentiality are our top priority. We protect the privacy and confidentiality of our clients.",
+  "valores2_text": "• Trust and Service. • Technicality and Professionalism. We are proud on the professional quality of our work. • Personal and ethical commitment. Integrity and honesty are at the heart of our business. • Our clients&#39; interests always come first. Our assets are our people and reputation. • We are passionate about everything we do. We strive to meet our clients&#39; needs every day. • Discretion and Confidentiality are our top priority. • We protect our clients&#39; privacy and confidentiality.",
 
   "fortalezas_titulo": "OUR STRENGTHS",
 
   "oferta_titulo": "COMPREHENSIVE SERVICE OFFER",
   "oferta_text": "FINANCE. AGRIBUSINESS. REAL ESTATE INVESTMENTS. BUSINESS CONSULTING. Broad and comprehensive range of services. A multidisciplinary team of highly qualified companies and professionals for each topic to be addressed. Service Quality Proposal and Know-How from our professional team. Strict regulatory standards across segments.",
 
-  "evitar_titulo": "AVOID CONFLICTS OF INTEREST",
+  "evitar_titulo": "AVOIDING CONFLICTS OF INTEREST",
   "evitar_text": "Avoiding conflicts of interest in our relationships with our clients (in structure, price, commission, product) is our philosophy and a central part of our management.",
 
   "discrecion_titulo": "DISCRETION AND CONFIDENTIALITY",
-  "discrecion_text": "We apply a relationship methodology based on discretion and confidentiality, based on building a long-term relationship.",
+  "discrecion_text": "We apply a working methodology based on discretion and confidentiality, based on building a long-term relationship.",
 
   "personalizado_titulo": "PERSONALIZED SERVICE",
-  "personalizado_text": "We listen attentively to identify our clients' needs, define their profile, and provide tailored solutions, fostering long-lasting relationships.",
+  "personalizado_text": "We listen to identify our clients&#39; needs, define their profile, and provide tailored solutions, fostering long-lasting relationships.",
 
   "trasparencia_titulo": "TRANSPARENCY",
   "trasparencia_text": "Transparency is a pillar and a means of expression within our mission to build mutual trust.",
 
   "independencia_titulo": "INDEPENDENCE",
-  "independencia_text": "The independence to be critical and to be able to freely select the best alternatives, without pressure from shareholders or economic groups, or obligations from an entity, person, operator, administrator, financier, policyholder, product developer or even the client, will give you absolute confidence that our advice will be impartial, critical and focused on your interests. We love what we do. Through partnerships, we are fully involved in the ongoing development of our business. In any specific matter, we stand by the client, independently seeking the most beneficial alternative. ",
+  "independencia_text": "The independence to be critical and to freely select the best alternatives, without pressures from shareholders or economic groups, nor obligations from an entity, person, operator, administrator, lenders, product developer or even the client, will give you the absolute confidence that our advice will be impartial, critical and focused on your interests. We love what we do.",
 
-  "flexibilidad_titulo": "FLEXIBILITY AND ADAPTATION",
-  "flexibilidad_text": "Develop in changing and dynamic environments, know how to analyze them, and try to adapt flexibly to them.",
+  "flexibilidad_titulo": "FLEXIBILITY AND ADAPTABILITY",
+  "flexibilidad_text": "operating in changing and dynamic environments, we know how to analyze and try to adapt to them.",
 
   "contacto_titulo": "CONTACT US",
   "contacto_pregunta": "ANY QUESTIONS OR CONCERNS?",
