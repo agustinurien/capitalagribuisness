@@ -17,9 +17,13 @@ export async function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
 }
 
-import video1 from "/videos/video1.mp4";
-import video2 from "/videos/gestionRiesgo.mp4";
-import video3 from "/videos/video2.mp4";
+import video1 from "/videos/01.mp4";
+import video2 from "/videos/02.mp4";
+import video3 from "/videos/03.mp4";
+import video4 from "/videos/04.mp4";
+import video5 from "/videos/05.mp4";
+import video6 from "/videos/CoberturaRiesgos.mp4";
+import video7 from "/videos/gestionRiesgo.mp4";
 
 const videoList = [
   {
@@ -30,6 +34,18 @@ const videoList = [
   },
   {
     src: video3,
+  },
+  {
+    src: video4,
+  },
+  {
+    src: video5,
+  },
+  {
+    src: video6,
+  },
+  {
+    src: video7,
   },
 ];
 
