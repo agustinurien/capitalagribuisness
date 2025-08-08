@@ -341,7 +341,8 @@ const translations = await import(`../i18n/locales/${lang}/translation.json`);
   }
   @media screen and (max-width: 768px) {
     .videoContainer {
-      height: 350px;
+      height: 320px;
+      padding: 10px 20px;
     }
     .heroContent h2 {
       font-size: 1rem;
@@ -376,11 +377,20 @@ const translations = await import(`../i18n/locales/${lang}/translation.json`);
       font-size: 0.7rem;
       width: 120px;
       height: 30px;
+      margin-bottom: 50px;
     }
     .finanzas a {
       width: 120px;
       height: 30px;
       font-size: 0.7rem;
+      margin-bottom: 50px;
     }
+  }
+  @media screen and (max-width: 500px) {
+    .videoContainer {
+      height: 250px;
+      padding: 10px 20px;
+    }
+    
   }
 </style>
