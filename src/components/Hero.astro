@@ -14,6 +14,15 @@ import video7 from "/videos/gestionRiesgo.mp4";
 
 import VideoSequencer from "./VideoSequencer";
 
+const videoListEn = [
+  {
+    src: video3,
+  },
+  {
+    src: video4,
+  },
+]
+
 const videoList = [
   {
     src: video1,
@@ -39,11 +48,11 @@ const videoList = [
 ];
 const { lang } = Astro.props;
 const translations = await import(`../i18n/locales/${lang}/translation.json`);
+const selectedVideoList = lang === "en" ? videoListEn : videoList;
 ---
-
 <div>
   <div class="videoContainer">
-    <VideoSequencer videos={videoList} client:load />
+    <VideoSequencer videos={selectedVideoList} client:load />
     <div class="tituloContainer">
       <Image src={logoHero} alt="logo" width={1000} class="logoHero" />
     </div>

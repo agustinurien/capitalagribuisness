@@ -25,6 +25,14 @@ import video5 from "/videos/05.mp4";
 import video6 from "/videos/CoberturaRiesgos.mp4";
 import video7 from "/videos/gestionRiesgo.mp4";
 
+const videoListEn = [
+  {
+    src: video3,
+  },
+  {
+    src: video4,
+  },
+]
 const videoList = [
   {
     src: video1,
@@ -53,6 +61,7 @@ const { lang } = Astro.params;
 const translations = await import(
   `../../../i18n/locales/${lang}/translation.json`
 );
+const selectedVideoList = lang === "en" ? videoListEn : videoList;
 
 const items = [
   {
@@ -101,7 +110,7 @@ const items = [
 <Layout>
   <div>
     <div class="videoContainer">
-      <VideoSequencer videos={videoList} client:load />
+      <VideoSequencer videos={selectedVideoList} client:load />
     </div>
 
     <div class="servicio">
